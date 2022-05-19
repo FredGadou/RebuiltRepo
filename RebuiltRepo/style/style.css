@@ -1,0 +1,638 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.mainDiv {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.pageCommandDiv {
+    position: fixed;
+    height: 32px;
+    left: 0px;
+    width: 32px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    top: 0px;
+}
+
+.pageCommandDiv:active {
+    -moz-box-shadow: inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+    background-color: #a1a1a1;
+}
+
+#backArrow {
+    position: relative;
+    top: 4px;
+    left: 8px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mainPageText {
+    margin: 10px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+.mainPageTitleDiv {
+    margin: 0 auto;
+    width: 450px;
+    text-align: center;
+}
+
+.fixedTop {
+    width: 100%;
+    height: 52px;
+    position: fixed;
+    background-image: linear-gradient(#adadad, #9f9f9f, #8e8e8e);
+}
+
+.fixedTopHidden {
+    width: 100%;
+    height: 52px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.topDiv {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    background-image: linear-gradient(#bbb, #bbb, #bbbaba, #adadad, #9f9f9f, #8e8e8e);
+}
+
+.topDivHide {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.menuIconDiv {
+    width: 32px;
+    margin: 10px;
+    position: fixed;
+    cursor: pointer;
+    text-align: center;
+    height: 32px;
+    border-radius: 3px;
+    left: 44px;
+    top: 0px;
+}
+
+.menuIconDiv:active {
+    -moz-box-shadow: inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+    background-color: #a1a1a1;
+}
+
+#menuIcon {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: xx-large;
+}
+
+.menuDropDownDiv {
+    position: fixed;
+    width: 200px;
+    text-align: center;
+    top: 45px;
+    left: 10px;
+    background-color: #939393;
+    box-shadow: 1px 1px 2px 0px;
+}
+
+.inLinkDiv:hover {
+    cursor: pointer;
+    background-color: #858585;
+}
+
+.maintLogo1Div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+#maintLogo1 {
+    width: 100px;
+}
+
+.searchDiv {
+    height: 30px;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 38px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    -moz-box-shadow: inset 0 0 4px #000000;
+    -webkit-box-shadow: inset 0 0 4px #000000;
+    box-shadow: inset 0 0 4px #000000;
+}
+
+.searchDivFixed {
+    height: 30px;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    -moz-box-shadow: inset 0 0 4px #000000;
+    -webkit-box-shadow: inset 0 0 4px #000000;
+    box-shadow: inset 0 0 4px #000000;
+}
+
+.searchInput,
+.searchInput:hover,
+.searchInput:active,
+.searchInput:focus-visible {
+    border: none;
+    position: relative;
+    top: -4px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#searchIcon {
+    position: relative;
+    top: 3px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.searchResultDiv {
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px 0px;
+    width: 300px;
+    max-height: 400px;
+    margin: 0 auto;
+    margin-top: 1px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.inSearchResultDiv {
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inSearchResultDiv:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.showResultDiv {
+    margin: 10px;
+    display: block;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px 0px;
+}
+
+.inResultDiv {
+    padding: 10px;
+}
+
+.inResultDiv:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.resultImgDiv {
+    width: 180px;
+    height: 65px;
+    display: inline-block;
+}
+
+.resultImg {
+    height: 65px;
+}
+
+.inResultTitleDiv {
+    display: inline-block;
+    margin-left: 50px;
+    top: -22px;
+    position: relative;
+    font-size: 20px;
+}
+
+.inResultTitleLink:link {
+    color: black;
+    text-decoration: none;
+}
+
+.inResultTitleLink:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.rebuiltNameDiv {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.presentationBox {
+    display: block;
+    border: solid;
+    border-width: 0px;
+    width: 300px;
+    margin: 11px;
+    padding: 5px;
+    background-image: linear-gradient(#b7b7b7, rgb(123, 123, 123));
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px 0px;
+    font-size: 16px;
+    position: relative;
+}
+
+.printPresBoxButton {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    height: 17px;
+    background-image: linear-gradient(#7b7b7b, #2f2f2f);
+    padding: 2px;
+    border-radius: 11px;
+    padding-inline: 10px;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inPresentationBox {
+    display: block;
+    height: 25px;
+    width: 300px;
+    padding-top: 7px;
+    margin: 10px;
+    margin-left: 5px;
+}
+
+#partListDiv {
+    min-height: 25px;
+    padding-top: 0px;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+.list {
+    margin-left: -25px;
+}
+
+.rebuiltPresentationBox {
+    margin: 20px;
+}
+
+#rebuiltImg {
+    height: 150px;
+}
+
+.zoomLense {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    width: 250px;
+    height: 250px;
+    overflow: clip;
+    border-radius: 125px;
+    border: solid;
+}
+
+.rebuiltImgZoomed {
+    position: absolute;
+}
+
+.labelInPresentationBox {
+    font-weight: bolder;
+    display: inline-block;
+}
+
+.inPartList {
+    height: 20px;
+    width: 280px;
+    white-space: nowrap;
+}
+
+.inPartList:hover {
+    cursor: default;
+    padding-left: 5px;
+}
+
+.nameInPresentationBox {
+    font-size: 30px;
+}
+
+.pDivInPresentationBox {
+    display: inline-block;
+    width: 157px;
+    margin: 5px;
+    white-space: break-spaces;
+}
+
+.pInPresentationBox {
+    display: inline;
+    margin-block: 0px;
+}
+
+#cp_1,
+#cp_2,
+#cp_3,
+#cp_4 {
+    font-size: 11px;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#partListLabel {
+    position: relative;
+    top: 10px;
+}
+
+.sidePartWindow {
+    position: relative;
+    background-image: linear-gradient(#b2b2b2, #b5b5b5);
+    width: 290px;
+    left: 200px;
+    top: -75px;
+    padding: 5px;
+    box-shadow: 2px 10px 8px -5px black;
+    border-radius: 10px;
+}
+
+.inSidePartWindow {
+    padding: 5px;
+    margin: 2px;
+    width: 270px;
+    margin-bottom: 0px;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+.labelSidePartWindow {
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.descInPresentationBox {
+    width: 170px;
+    display: -webkit-inline-box;
+    margin-left: 5px;
+}
+
+.reletedDocDiv {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    max-width: 500px;
+    min-height: 100px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 0px;
+    overflow-wrap: anywhere;
+}
+
+.reletedDocTitle {
+    text-align: center;
+    margin-inline: 40px;
+}
+
+.reletedDocLinkDiv {
+    margin-inline-end: 30px;
+}
+
+.linkDoc {
+    display: block;
+    margin: 5px;
+}
+
+.categoriesDiv {
+    margin: 20px;
+}
+
+.categorieImgDiv {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.categoriesImgLink {
+    height: 100px;
+    box-shadow: 1px 1px 3px 0px;
+    padding: 2px;
+}
+
+.typeImgLink {
+    height: 200px;
+    box-shadow: 1px 1px 3px 0px;
+    padding: 2px;
+}
+
+.linkDiv {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.randomRebuiltDownDiv {
+    position: absolute;
+    bottom: 10px;
+    position: sticky;
+    top: 80%;
+}
+
+.leftArrowDiv {
+    position: absolute;
+    left: 38px;
+    height: 100%;
+    width: 15px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+
+.rightArrowDiv {
+    position: absolute;
+    right: 38px;
+    height: 100%;
+    width: 15px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+
+.leftArrowDiv:hover,
+.rightArrowDiv:hover {
+    background-image: linear-gradient(to bottom, #8281810a, #82818141, #82818141, #82818141, #82818141, #82818141, #82818141, #8281810a);
+}
+
+#leftArrow {
+    position: absolute;
+    top: 38%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#rightArrow {
+    position: absolute;
+    top: 38%;
+    right: 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gridImgDiv {
+    display: grid;
+    background-image: linear-gradient(to right, #b0afaf, #d2d2d2, #dfdfdf, #b0b0b0);
+    box-shadow: 1px 1px 3px 1px #999;
+    padding-block: 10px;
+    height: 103px;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 10px;
+    row-gap: 1em;
+    padding-left: 100px;
+    padding-right: 80px;
+}
+
+.cpTooltipDiv {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    margin-top: -265px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px 0px;
+}
+
+.tooltipDiv {
+    position: relative;
+    top: -69px;
+    right: -30px;
+    height: 50px;
+    display: none;
+}
+
+.chatBubble {
+    position: relative;
+    background-color: lightgray;
+    height: 50px;
+    border-radius: 10px;
+    min-width: 140px;
+}
+
+.chatBubbleTriangle {
+    width: 0;
+    border-left: 2px solid transparent;
+    border-right: 41px solid transparent;
+    border-top: 38px solid #d3d3d3;
+    position: relative;
+    top: 24px;
+    left: 8px;
+}
+
+.nameInBubble {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.rdImgDiv1,
+.rdImgDiv2,
+.rdImgDiv3,
+.rdImgDiv4,
+.rdImgDiv5,
+.rdImgDiv6,
+.rdImgDiv7 {
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.rdImgDiv1:hover,
+.rdImgDiv2:hover,
+.rdImgDiv3:hover,
+.rdImgDiv4:hover,
+.rdImgDiv5:hover,
+.rdImgDiv6:hover,
+.rdImgDiv7:hover {
+    top: -35px;
+    left: -15px;
+    height: 130px;
+    width: 130px;
+    box-shadow: 0px 17px 15px -8px rgba(6, 6, 6, 0.6);
+}
+
+.rdImg {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
