@@ -574,7 +574,9 @@ function showResult() {
         while (showResultDiv.hasChildNodes()) {
             showResultDiv.removeChild(showResultDiv.firstChild);
         }
+        
         hideMainDivChildren();
+        
         searchResult.sort(function(a, b) {
             if (a.name < b.name) {
                 return -1;
