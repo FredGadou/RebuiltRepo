@@ -574,9 +574,7 @@ function showResult() {
         while (showResultDiv.hasChildNodes()) {
             showResultDiv.removeChild(showResultDiv.firstChild);
         }
-        
         hideMainDivChildren();
-        
         searchResult.sort(function(a, b) {
             if (a.name < b.name) {
                 return -1;
@@ -1012,7 +1010,7 @@ function printRebuilt(rebuilt) {
         let lastParam;
         if (parseInt(part.cascadesId) < 1000) {
             secondParam = 'N/A';
-            lastParam = 'Sur RÃ©quisition';
+            lastParam = 'Sur Réquisition';
         } else {
             secondParam = part.cascadesId;
             lastParam = 'Section: ' + part.sectionMaga;

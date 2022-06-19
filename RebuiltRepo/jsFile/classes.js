@@ -1,4 +1,4 @@
-class Machine {
+﻿class Machine {
     constructor(id) {
         this.id = id;
         this.rebuiltList = new Map();

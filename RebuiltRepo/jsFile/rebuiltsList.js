@@ -6,9 +6,9 @@ atomiseurcolle.factoryId = '1/4JAU-SS';
 atomiseurcolle.sectionMaga = 'E2 C-8';
 atomiseurcolle.rebuiltClass = 'Atomiseur';
 atomiseurcolle.documentations = [
-    ['Spare Parts', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc/PL14JAU-SS-&14JAUCO-SS.pdf']
+    ['Spare Parts', 'rebuiltDoc/PL14JAU-SS-&14JAUCO-SS.pdf']
 ];
-atomiseurcolle.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14111.jpg';
+atomiseurcolle.img = 'image/14111.jpg';
 
 let atomiseurLSX = new Rebuilt(14357, 'Atomiseur 1/4XA');
 atomiseurLSX.factoryId = '1/4XA02SSBRJBSF050F';
@@ -16,9 +16,9 @@ atomiseurLSX.sectionMaga = 'E2 E-4';
 atomiseurLSX.rebuiltClass = 'Atomiseur';
 atomiseurLSX.company = 'Bete Fog Nozzle inc.'
 atomiseurLSX.documentations = [
-    ['Spare Parts', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc/XAspraygun.pdf']
+    ['Spare Parts', 'rebuiltDoc/XAspraygun.pdf']
 ];
-atomiseurLSX.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14357.jpg';
+atomiseurLSX.img = 'image/14357.jpg';
 
 let atomiseurForte = new Rebuilt(14359, 'Atomiseur 1/8VAU');
 atomiseurForte.factoryId = 'PL 1/8VAU-SS';
@@ -28,19 +28,19 @@ atomiseurForte.company = 'Spraying System Co.';
 atomiseurForte.documentations = [
     ['Spare Parts', '//ad.cascades.com/data/CTG-375 Granby/Maintenance Mecanique/016- Ligne 16/016-016 (Log saw)/4- Spare Parts/spraying systems.pdf']
 ];
-atomiseurForte.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14359.jpg';
+atomiseurForte.img = 'image/14359.jpg';
 
 let blocMeuleLSX = new Rebuilt(98865, 'Bloc meule LSX');
 blocMeuleLSX.sectionMaga = 'E2 E-8';
 blocMeuleLSX.rebuiltClass = 'Aiguisage';
-blocMeuleLSX.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/98865.jpg';
+blocMeuleLSX.img = 'image/98865.jpg';
 
 let blocMeuleKuosIn = new Rebuilt(19693, 'Bloc meule kuos interne');
 blocMeuleKuosIn.sectionMaga = 'D1 E-8';
 blocMeuleKuosIn.rebuiltClass = 'Aiguisage';
-blocMeuleKuosIn.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/19693.jpg';
+blocMeuleKuosIn.img = 'image/19693.jpg';
 blocMeuleKuosIn.documentations = [
-    ['Exploded View', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/blocMeuleKuosInExploded.png']
+    ['Exploded View', 'image/blocMeuleKuosInExploded.png']
 ];
 
 
@@ -51,29 +51,36 @@ let blocMeuleM10In = new Rebuilt(16328, 'Pulsar Internal Grindstone');
 blocMeuleM10In.factoryId = '224379';
 blocMeuleM10In.sectionMaga = 'F2 D-8';
 blocMeuleM10In.rebuiltClass = 'Aiguisage';
-blocMeuleM10In.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/16328.jpg';
+blocMeuleM10In.img = 'image/16328.jpg';
+blocMeuleM10In.documentations = [
+    ['Exploded View', 'rebuiltDoc/pulsarInt.pdf']
+];
+
 let blocMeuleM10Ex = new Rebuilt(16326, 'Pulsar External Grindstone');
 blocMeuleM10Ex.factoryId = '224381';
 blocMeuleM10Ex.sectionMaga = 'F2 C-3';
 blocMeuleM10Ex.rebuiltClass = 'Aiguisage';
-blocMeuleM10Ex.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/16326.jpg';
+blocMeuleM10Ex.img = 'image/16326.jpg';
+blocMeuleM10Ex.documentations = [
+    ['Exploded View', 'rebuiltDoc/pulsarExt.pdf']
+];
 
 let blocMeuleBretting = new Rebuilt(109, 'Bloc meule Bretting');
 blocMeuleBretting.rebuiltClass = 'Aiguisage';
 blocMeuleBretting.documentations = [
-    ['Spare Parts', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc/bladeSharpenerBrettingLS.pdf']
+    ['Spare Parts', 'rebuiltDoc/bladeSharpenerBrettingLS.pdf']
 ];
 
 let carriageMandrelIR505Droit = new Rebuilt(14685, 'Carriage mandrel IR505 Droit');
 carriageMandrelIR505Droit.factoryId = '243030002';
 carriageMandrelIR505Droit.sectionMaga = 'E3 D-2';
 carriageMandrelIR505Droit.rebuiltClass = 'Assembly';
-carriageMandrelIR505Droit.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14685.jpg';
+carriageMandrelIR505Droit.img = 'image/14685.jpg';
 
 let chaineLanceurLSX = new Rebuilt(20006, 'Chaine lanceur LSX');
 chaineLanceurLSX.sectionMaga = 'E1 C-8';
 chaineLanceurLSX.rebuiltClass = 'Assembly';
-chaineLanceurLSX.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/20006.jpg';
+chaineLanceurLSX.img = 'image/20006.jpg';
 
 let clutchTGC60 = new Rebuilt(14756, 'Clutch TGC60');
 clutchTGC60.factoryId = 'TGC60';
@@ -82,7 +89,7 @@ clutchTGC60.company = 'Browning';
 clutchTGC60.documentations = [
     ['Operation and Maintenance Instructions', 'https://cdnmedia.regalbeloit.com/images/d120001/medias/docus/4402/InstallationManuals_Form_8322E.pdf']
 ];
-clutchTGC60.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14758.jpg';
+clutchTGC60.img = 'image/14758.jpg';
 
 let clutchTGC20 = new Rebuilt(14758, 'Clutch TGC20');
 clutchTGC20.factoryId = 'TGC20'
@@ -91,7 +98,7 @@ clutchTGC20.sectionMaga = 'R2 E-2';
 clutchTGC20.documentations = [
     ['Operation and Maintenance Instructions', 'https://cdnmedia.regalbeloit.com/images/d120001/medias/docus/4402/InstallationManuals_Form_8322E.pdf']
 ];
-clutchTGC20.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14756.jpg';
+clutchTGC20.img = 'image/14756.jpg';
 
 let clutchTGC200 = new Rebuilt(17574, 'Clutch TGC200');
 clutchTGC200.factoryId = 'TGC200'
@@ -100,47 +107,47 @@ clutchTGC200.sectionMaga = 'R2 F-2';
 clutchTGC200.documentations = [
     ['Operation and Maintenance Instructions', 'https://cdnmedia.regalbeloit.com/images/d120001/medias/docus/4402/InstallationManuals_Form_8322E.pdf']
 ];
-clutchTGC200.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/17574.jpg';
+clutchTGC200.img = 'image/17574.jpg';
 
 let hubLameKuos = new Rebuilt(12779, "Hub lame Kuo's Assy");
 hubLameKuos.sectionMaga = 'D1 D-5';
 hubLameKuos.rebuiltClass = 'Assembly';
 hubLameKuos.documentations = [
-    ['Exploded View', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/hubKuosAssyImg01.png'],
-    ['7216 BEP Technical Document' , 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc/7216BEPDOC.pdf']
+    ['Exploded View', 'image/hubKuosAssyImg01.png'],
+    ['7216 BEP Technical Document' , 'rebuiltDoc/7216BEPDOC.pdf']
 ];
-hubLameKuos.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/12779.jpg';
+hubLameKuos.img = 'image/12779.jpg';
 
 let plyIR505 = new Rebuilt(113, 'Plybonder IR505');
 
 let plyM10 = new Rebuilt(114, 'Plybonder M10');
 plyM10.rebuiltClass = 'Plybonder';
-plyM10.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/114.jpg';
+plyM10.img = 'image/114.jpg';
 
 let plyM11 = new Rebuilt(30034, 'Plybonder M11 Double');
 plyM11.rebuiltClass = 'Plybonder';
 plyM11.sectionMaga = 'G2 B-3'
-plyM11.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/30034.jpg';
+plyM11.img = 'image/30034.jpg';
 
 let plyM15 = new Rebuilt(116, 'Plybonder M15');
 plyM15.factoryId = 'NAQ_130C_00';
 plyM15.company = 'Delsar'
 plyM15.rebuiltClass = 'Plybonder';
 plyM15.documentations = [
-    ['Spare Parts', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc/NAQ_130C_00_ESPLOSO.pdf']
+    ['Spare Parts', 'rebuiltDoc/NAQ_130C_00_ESPLOSO.pdf']
 ];
-plyM15.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/116.jpg';
+plyM15.img = 'image/116.jpg';
 
 let plyM16 = new Rebuilt(117, 'Plybonder M16');
 plyM16.rebuiltClass = 'Plybonder';
 plyM16.documentations = [
     ['Spare Parts', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/016- Ligne 16/016-007 (Rewinder)/1- Plans/4- Spare Parts/M16 Plybonder.pdf']
 ];
-plyM16.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/117.jpg';
+plyM16.img = 'image/117.jpg';
 
 let plyM22 = new Rebuilt(118, 'Plybonder M22');
 plyM22.rebuiltClass = 'Plybonder';
-plyM22.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/118.jpg'
+plyM22.img = 'image/118.jpg'
 
 let pompeDia = new Rebuilt(24399, 'Pompe Diaphragme');
 pompeDia.factoryId = '66605J-34B';
@@ -150,7 +157,7 @@ pompeDia.company = 'Aro';
 pompeDia.documentations = [
     ['Manual', 'https://d1pkofokfruj4.cloudfront.net/media/upload/resource/j/ARO-2019-66605X-1-2-Inch-Classic-Non-Metallic-Diaphragm-Pump-Manual-Fluid-Section.pdf']
 ];
-pompeDia.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/10019.webp';
+pompeDia.img = 'image/10019.webp';
 
 let pusherRota = new Rebuilt(14161, 'Pusher rotatonique assy.');
 pusherRota.sectionMaga = 'H2 D-9';
@@ -160,18 +167,25 @@ let rabbitIR505 = new Rebuilt(14026, 'Rabbit/Carriage');
 rabbitIR505.factoryId = '243045008';
 rabbitIR505.sectionMaga = 'E3 D-3';
 rabbitIR505.rebuiltClass = 'Assembly';
+rabbitIR505.img = 'image/14026.jpg';
 
 let relaxGripper = new Rebuilt(40191, 'Relax Gripper');
 relaxGripper.factoryId = 'B20192005';
 relaxGripper.sectionMaga = 'I2 C-8';
 relaxGripper.rebuiltClass = 'Assembly';
-relaxGripper.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/40191.jpg';
+relaxGripper.img = 'image/40191.jpg';
+relaxGripper.documentations = [
+    ['Exploded View', 'rebuiltDoc/relaxGrip.pdf']
+];
 
 let shaftBallouneEmb = new Rebuilt(120, 'Shaft balloune');
 
 let slitterM12 = new Rebuilt(121, 'Slitter M12');
 slitterM12.rebuiltClass = 'Cutting';
-slitterM12.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/121.jpg';
+slitterM12.img = 'image/121.jpg';
+slitterM12.documentations = [
+    ['Expoded View', 'image/slitterM12Expl.png']
+];
 
 let slitterBretting = new Rebuilt(13224, 'Slitter Class I');
 slitterBretting.factoryId = 'Slitter Class I';
@@ -179,9 +193,9 @@ slitterBretting.sectionMaga = 'LL2 D-8';
 slitterBretting.rebuiltClass = 'Cutting';
 slitterBretting.company = 'Tidland';
 slitterBretting.documentations = [
-    ['Installation, Operation and Maintenance', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/rebuiltDoc//Tidland_PSAutoKnifeholder_Manual_1.pdf']
+    ['Installation, Operation and Maintenance', 'rebuiltDoc/Tidland_PSAutoKnifeholder_Manual_1.pdf']
 ];
-slitterBretting.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/13224.jpg';
+slitterBretting.img = 'image/13224.jpg';
 
 
 
@@ -192,14 +206,14 @@ cyl_ave01.factoryId = '0822125003';
 cyl_ave01.sectionMaga = 'F3 F-5';
 cyl_ave01.rebuiltClass = 'Cylindre';
 cyl_ave01.company = 'Aventics';
-cyl_ave01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/40112.jpg';
+cyl_ave01.img = 'image/40112.jpg';
 
 let cyl_ave02 = new Rebuilt(21720, 'S4AL-45A2V-BAA0');
 cyl_ave02.factoryId = 'S4AL-45A2V-BAA0';
 cyl_ave02.sectionMaga = 'C4 PLANC';
 cyl_ave02.rebuiltClass = 'Cylindre';
 cyl_ave02.company = 'Aventics';
-cyl_ave02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/21720.jpg';
+cyl_ave02.img = 'image/21720.jpg';
 
 let cyl_bos01 = new Rebuilt(24192, '0.822.232.003');
 cyl_bos01.factoryId = '0822232003';
@@ -209,14 +223,14 @@ cyl_bos01.company = 'Bosch';
 cyl_bos01.documentations = [
     ['Configuration documentation', 'P:/CTG-375%20Granby/Maintenance%20Mecanique/html/Source/RebuiltRepo/rebuiltDoc/0822232003_MNI-DA-16-0050-D-01-01-1-00-000-00_22393861.pdf']
 ]
-cyl_bos01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24192.jpg';
+cyl_bos01.img = 'image/24192.jpg';
 
 let cyl_fes01 = new Rebuilt(11275, 'DGC-32-600-GF-PPV-A');
 cyl_fes01.factoryId = 'DGC-32-600-GF-PPV-A';
 cyl_fes01.sectionMaga = 'G4 A-1';
 cyl_fes01.rebuiltClass = 'Cylindre';
 cyl_fes01.company = 'Festo';
-cyl_fes01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/11275.jpg';
+cyl_fes01.img = 'image/11275.jpg';
 cyl_fes01.documentations = [
     ['Linear drives DGC', 'https://www.festo.com/media/pim/014/D15000100122014.PDF']
 ]
@@ -226,7 +240,7 @@ cyl_fes02.factoryId = 'DSBC-40-200-PPVA-N3';
 cyl_fes02.sectionMaga = 'I4 B-9';
 cyl_fes02.rebuiltClass = 'Cylindre';
 cyl_fes02.company = 'Festo';
-cyl_fes02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/28306.jpg';
+cyl_fes02.img = 'image/28306.jpg';
 cyl_fes02.documentations = [
     ['Standards-based cylinders DSBC', 'https://www.festo.com/media/pim/133/D15000100122133.PDF']
 ];
@@ -236,21 +250,21 @@ cyl_num01.factoryId = 'P2AL-0512D-B2AO';
 cyl_num01.sectionMaga = 'C2 D-3';
 cyl_num01.rebuiltClass = 'Cylindre';
 cyl_num01.company = 'Numatics';
-cyl_num01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/92928.jpg';
+cyl_num01.img = 'image/92928.jpg';
 
 let cyl_num02 = new Rebuilt(50133, 'F1AL-30A7J-C2AO');
 cyl_num02.factoryId = 'F1AL-30A7J-C2AO';
 cyl_num02.sectionMaga = 'D3 D-1';
 cyl_num02.rebuiltClass = 'Cylindre';
 cyl_num02.company = 'Numatics';
-cyl_num02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/50133.jpg';
+cyl_num02.img = 'image/50133.jpg';
 
 let cyl_pne01 = new Rebuilt(24218, '1309.200.0800.01.SP');
 cyl_pne01.factoryId = '1309.200.0800.01.SP';
 cyl_pne01.rebuiltClass = 'Cylindre';
 cyl_pne01.sectionMaga = 'C2 D-4';
 cyl_pne01.company = 'Pneumax';
-cyl_pne01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24218.jpg';
+cyl_pne01.img = 'image/24218.jpg';
 
 let cyl_pne02 = new Rebuilt(20205, '1348.50.80.01');
 cyl_pne02.factoryId = '1348.50.80.01';
@@ -258,9 +272,9 @@ cyl_pne02.sectionMaga = 'F3 F-2';
 cyl_pne02.rebuiltClass = 'Cylindre';
 cyl_pne02.company = 'Pneumax';
 cyl_pne02.documentations = [
-    ['SÃ©rie 1348/1350', 'https://manufacturescorpion.com/uploads/documents/1348.pdf']
+    ['Série 1348/1350', 'https://manufacturescorpion.com/uploads/documents/1348.pdf']
 ]
-cyl_pne02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/20205.jpg';
+cyl_pne02.img = 'image/20205.jpg';
 
 let cyl_sco01 = new Rebuilt(92889, '1319.32.350.01');
 cyl_sco01.factoryId = '1319.32.350.01';
@@ -268,10 +282,10 @@ cyl_sco01.sectionMaga = 'C3 E-7';
 cyl_sco01.rebuiltClass = 'Cylindre';
 cyl_sco01.company = 'Scorpion';
 cyl_sco01.documentations = [
-    ['SÃ©rie 1319/1321', 'https://manufacturescorpion.com/uploads/documents/1319.pdf'],
+    ['Série 1319/1321', 'https://manufacturescorpion.com/uploads/documents/1319.pdf'],
     ['Series 1300 Accessories and fixing device', 'https://manufacturescorpion.com/uploads/documents/EN_fixation_ISO.pdf']
 ];
-cyl_sco01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/92889.jpg';
+cyl_sco01.img = 'image/92889.jpg';
 
 let cyl_sco02 = new Rebuilt(92898, '1260.32.15.SP');
 cyl_sco02.factoryId = '1260.32.15.SP';
@@ -281,7 +295,7 @@ cyl_sco02.company = 'Scorpion';
 cyl_sco02.documentations = [
     ['Series 1200', 'https://manufacturescorpion.com/uploads/documents/1260_2020.pdf']
 ];
-cyl_sco02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/92898.jpg';
+cyl_sco02.img = 'image/92898.jpg';
 
 let cyl_sco03 = new Rebuilt(24200, '1319.100.300.1');
 cyl_sco03.factoryId = '1319.100.300.1';
@@ -289,10 +303,10 @@ cyl_sco03.sectionMaga = 'P1 G-5';
 cyl_sco03.rebuiltClass = 'Cylindre';
 cyl_sco03.company = 'Scorpion';
 cyl_sco03.documentations = [
-    ['SÃ©rie 1319/1321', 'https://manufacturescorpion.com/uploads/documents/1319.pdf'],
+    ['Série 1319/1321', 'https://manufacturescorpion.com/uploads/documents/1319.pdf'],
     ['Series 1300 Accessories and fixing device', 'https://manufacturescorpion.com/uploads/documents/EN_fixation_ISO.pdf']
 ];
-cyl_sco03.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24200.jpg';
+cyl_sco03.img = 'image/24200.jpg';
 
 let cyl_smc01 = new Rebuilt(20014, 'C96SB32-50');
 cyl_smc01.factoryId = 'C96SB32-50';
@@ -302,7 +316,7 @@ cyl_smc01.company = 'SMC';
 cyl_smc01.documentations = [
     ['Series C96', 'https://www.smcpneumatics.com/pdfs/C96.pdf']
 ];
-cyl_smc01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/20014.jpg';
+cyl_smc01.img = 'image/20014.jpg';
 
 let cyl_smc02 = new Rebuilt(24235, 'MY1B63G-700');
 cyl_smc02.factoryId = 'MY1B63G-700';
@@ -312,7 +326,7 @@ cyl_smc02.company = 'SMC';
 cyl_smc02.documentations = [
     ['Series MY1', 'https://www.smcpneumatics.com/pdfs/MY1.pdf']
 ];
-cyl_smc02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24235.jpg';
+cyl_smc02.img = 'image/24235.jpg';
 
 let cyl_smc03 = new Rebuilt(24202, 'CQ2KB32-50D');
 cyl_smc03.factoryId = 'CQ2KB32-50D';
@@ -322,7 +336,7 @@ cyl_smc03.company = 'SMC';
 cyl_smc03.documentations = [
     ['CQ2 Compact Cylinder', 'https://www.smcpneumatics.com/smcdigitalcat3/docs/actuator/compact/cq2-0909.pdf']
 ];
-cyl_smc03.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24202.jpg';
+cyl_smc03.img = 'image/24202.jpg';
 
 let cyl_smc04 = new Rebuilt(24236, 'CQ2B50TF-20SZ');
 cyl_smc04.factoryId = 'CQ2B50TF-20SZ';
@@ -332,7 +346,7 @@ cyl_smc04.company = 'SMC';
 cyl_smc04.documentations = [
     ['CQ2 Compact Cylinder Auto Switch Mounting Groove', 'https://www.smcpneumatics.com/pdfs/CQ2_Z.pdf']
 ];
-cyl_smc04.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24236.jpg';
+cyl_smc04.img = 'image/24236.jpg';
 
 let cyl_smc05 = new Rebuilt(24126, 'CQ2KB32-30D');
 cyl_smc05.factoryId = 'CQ2KB32-30D';
@@ -342,7 +356,7 @@ cyl_smc05.company = 'SMC';
 cyl_smc05.documentations = [
     ['CQ2 Compact Cylinder Auto Switch Mounting Groove', 'https://www.smcpneumatics.com/pdfs/CQ2_Z.pdf']
 ];
-cyl_smc05.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/24126.jpg';
+cyl_smc05.img = 'image/24126.jpg';
 
 let cyl_she01 = new Rebuilt(15999, '4MAC11');
 cyl_she01.factoryId = '4MAC11';
@@ -352,7 +366,7 @@ cyl_she01.company = 'Sheffer';
 cyl_she01.documentations = [
     ['MA Series Medium Duty', 'https://sheffercorp.com/wp-content/uploads/2017/08/ma-series-medium-duty.pdf']
 ]
-cyl_she01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/15999.jpg';
+cyl_she01.img = 'image/15999.jpg';
 //---------------- Cylindre ----------------// End
 
 
@@ -366,7 +380,7 @@ gearbox_tigear01.company = 'Dodge'
 gearbox_tigear01.documentations = [
     ['Tigear-2 gearing Engineering catalog', 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK107393&LanguageCode=en&DocumentPartId=&Action=Launch']
 ];
-gearbox_tigear01.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/14990.jpg';
+gearbox_tigear01.img = 'image/14990.jpg';
 
 let gearbox_tigear02 = new Rebuilt(16425, 'Dodge Tigear 2 10/1 Left');
 gearbox_tigear02.factoryId = '23A10L14';
@@ -376,7 +390,7 @@ gearbox_tigear02.company = 'Dodge';
 gearbox_tigear02.documentations = [
     ['Tigear-2 gearing Engineering catalog', 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK107393&LanguageCode=en&DocumentPartId=&Action=Launch']
 ];
-gearbox_tigear02.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/16425.jpg';
+gearbox_tigear02.img = 'image/16425.jpg';
 
 let gearbox_tigear03 = new Rebuilt(16426, 'Dodge Tigear 2 10/1 Right');
 gearbox_tigear03.factoryId = '23A10R14';
@@ -386,7 +400,7 @@ gearbox_tigear03.company = 'Dodge';
 gearbox_tigear03.documentations = [
     ['Tigear-2 gearing Engineering catalog', 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK107393&LanguageCode=en&DocumentPartId=&Action=Launch']
 ];
-gearbox_tigear03.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/16426.jpg';
+gearbox_tigear03.img = 'image/16426.jpg';
 
 let gearbox_tigear04 = new Rebuilt(16428, 'Dodge Tigear 2 15/1 Right');
 gearbox_tigear04.factoryId = '23A15R14';
@@ -396,7 +410,7 @@ gearbox_tigear04.company = 'Dodge';
 gearbox_tigear04.documentations = [
     ['Tigear-2 gearing Engineering catalog', 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK107393&LanguageCode=en&DocumentPartId=&Action=Launch']
 ];
-gearbox_tigear04.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/16426.jpg';
+gearbox_tigear04.img = 'image/16426.jpg';
 
 let gearbox_tigear05 = new Rebuilt(96135, 'Dodge Tigear 2 20/1 Hollow');
 gearbox_tigear05.factoryId = '20Q20H56';
@@ -406,7 +420,7 @@ gearbox_tigear05.company = 'Dodge';
 gearbox_tigear05.documentations = [
     ['Tigear-2 gearing Engineering catalog', 'https://search.abb.com/library/Download.aspx?DocumentID=9AKK107393&LanguageCode=en&DocumentPartId=&Action=Launch']
 ];
-gearbox_tigear05.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/96135.jpg';
+gearbox_tigear05.img = 'image/96135.jpg';
 //---------------- Gearbox ----------------// End
 
 
@@ -427,7 +441,7 @@ gearbox_tigear05.img = 'P:/CTG-375%20Granby/Maintenance%20Mecanique/root/Rebuilt
 //----0822125003(cyl)----// 
 let cyl_ave01_sparePart = new Part(123, 'Spare part kit - standard');
 cyl_ave01_sparePart.factoryId = 'R413000903';
-cyl_ave01_sparePart.description = 'Sur rÃ©quisition';
+cyl_ave01_sparePart.description = 'Sur réquisition';
 
 cyl_ave01.addPart(cyl_ave01_sparePart);
 //----0822125003(cyl)----// End
@@ -528,7 +542,7 @@ bmLSX_strokeAjBlock.sectionMaga = 'E2 C-7';
 let bmLSX_stopStrokeBlock = new Part(14218, 'Block');
 bmLSX_stopStrokeBlock.factoryId = '323005010';
 bmLSX_stopStrokeBlock.sectionMaga = 'E2 C-4';
-let bmLSX_linearBearing = new Part(14883, 'Brearing linÃ©aire');
+let bmLSX_linearBearing = new Part(14883, 'Brearing linéaire');
 bmLSX_linearBearing.factoryId = 'LBBR 12';
 bmLSX_linearBearing.sectionMaga = 'E2 F-8';
 let bmLSX_spacer = new Part(17182, 'Spacer');
@@ -546,7 +560,7 @@ bmLSX_couplingCyl.sectionMaga = 'E2  B-5';
 let bmLSX_cylBracket = new Part(19722, 'Bracket pour cylindre');
 bmLSX_cylBracket.factoryId = '350A47015';
 bmLSX_cylBracket.sectionMaga = 'E4 E-2';
-let bmLSX_shaftBracket = new Part(17076, 'Bracket pour rod linÃ©aire');
+let bmLSX_shaftBracket = new Part(17076, 'Bracket pour rod linéaire');
 bmLSX_shaftBracket.factoryId = '340A05007';
 bmLSX_shaftBracket.sectionMaga = 'E1  E-8';
 let bmLSX_couplingLovejoy = new Part(92619, 'Coupling style lovejoy');
@@ -564,6 +578,9 @@ bmLSX_body.sectionMaga = 'E3 B-4';
 let bmLSX_motor = new Part(24380, 'Moteur pneumatique');
 bmLSX_motor.factoryId = '1UP NRV-3A';
 bmLSX_motor.sectionMaga = 'E2 A-9';
+let bmLSX_shaft1 = new Part(17018, 'Shaft Linéaire');
+bmLSX_shaft1.factoryId = 'Shaft 10mm x 150mm';
+bmLSX_shaft1.sectionMaga = 'E1 B-14';
 
 blocMeuleLSX.addPart(bmLSX_base);
 blocMeuleLSX.addPart(bmLSX_strokeAjBlock);
@@ -580,6 +597,7 @@ blocMeuleLSX.addPart(bmLSX_lovejoy);
 blocMeuleLSX.addPart(bmLSX_shaftGrindWheel);
 blocMeuleLSX.addPart(bmLSX_body);
 blocMeuleLSX.addPart(bmLSX_motor);
+blocMeuleLSX.addPart(bmLSX_shaft1);
 //----block meule LSX----// End
 
 
@@ -589,7 +607,7 @@ blocMeuleBretting_cyl.factoryId = 'BHH118 1/8';
 blocMeuleBretting_cyl.sectionMaga = 'LL2 D-3';
 let blocMeuleBretting_bearin01 = new Part(65515, 'Bearing');
 blocMeuleBretting_bearin01.factoryId = '5201A-2RS';
-blocMeuleBretting_bearin01.description = 'Sur rÃ©quisition';
+blocMeuleBretting_bearin01.description = 'Sur réquisition';
 let blocMeuleBretting_wheelGrd = new Part(13259, 'Wheel-Grinding');
 blocMeuleBretting_wheelGrd.factoryId = 'CBN4-180-75V';
 blocMeuleBretting_wheelGrd.sectionMaga = 'L2 B-2';
@@ -633,6 +651,138 @@ blocMeuleKuosIn.addPart(blocMeuleKuosIn_nut);
 blocMeuleKuosIn.addPart(blocMeuleKuosIn_bearing);
 blocMeuleKuosIn.addPart(blocMeuleKuosIn_bushing01);
 //----blocMeuleKuosIn----// End
+
+
+//----blocMeuleM10 In&Ext----//
+let blocMeuleM10In_support = new Part(17412, 'Support');
+blocMeuleM10In_support.factoryId = '223832';
+blocMeuleM10In_support.sectionMaga = 'F2 D-7';
+let blocMeuleM10In_wheelGrind = new Part(17698, 'Grinding Wheel');
+blocMeuleM10In_wheelGrind.factoryId = '223850';
+blocMeuleM10In_wheelGrind.sectionMaga = 'F3';
+let blocMeuleM10In_stopRingNut = new Part(17388, 'Stop Ring Nut');
+blocMeuleM10In_stopRingNut.factoryId = '223872';
+blocMeuleM10In_stopRingNut.sectionMaga = 'F2 C-5';
+let blocMeuleM10In_pinGasket = new Part(96164, 'Pin Gasket');
+blocMeuleM10In_pinGasket.factoryId = '223875';
+blocMeuleM10In_pinGasket.description = 'Sur réquisition';
+let blocMeuleM10In_bushing1 = new Part(91450, 'Bushing');
+blocMeuleM10In_bushing1.factoryId = '224385';
+blocMeuleM10In_bushing1.sectionMaga = 'F2 A-7';
+let blocMeuleM10In_bushing2 = new Part(14472, 'Bushing');
+blocMeuleM10In_bushing2.factoryId = '21171633';
+blocMeuleM10In_bushing2.sectionMaga = 'F1 C-6';
+let blocMeuleM10In_bushing3 = new Part(14474, 'Bushing');
+blocMeuleM10In_bushing3.factoryId = '21171696';
+blocMeuleM10In_bushing3.sectionMaga = 'F1 C-6';
+let blocMeuleM10In_ring1 = new Part(97041, 'Ring');
+blocMeuleM10In_ring1.factoryId = '224384';
+blocMeuleM10In_ring1.description = 'Sur réquisition';
+let blocMeuleM10In_ring2 = new Part(16590, 'Ring');
+blocMeuleM10In_ring2.factoryId = '20512428';
+blocMeuleM10In_ring2.sectionMaga = 'F2 A-6';
+let blocMeuleM10In_ring3 = new Part(16600, 'Seal Ring');
+blocMeuleM10In_ring3.factoryId = '20512058';
+blocMeuleM10In_ring3.sectionMaga = 'F2 A-6';
+let blocMeuleM10In_ring4 = new Part(15982, 'Seal Ring');
+blocMeuleM10In_ring4.factoryId = '20505318';
+blocMeuleM10In_ring4.sectionMaga = 'F2 C-4';
+let blocMeuleM10In_ring5 = new Part(16602, 'Seal Ring');
+blocMeuleM10In_ring5.factoryId = '20512089';
+blocMeuleM10In_ring5.sectionMaga = 'F2 A-6';
+let blocMeuleM10In_ring6 = new Part(16592, 'Seal Ring');
+blocMeuleM10In_ring6.factoryId = '20512828';
+blocMeuleM10In_ring6.sectionMaga = 'F2 A-6';
+let blocMeuleM10In_ring7 = new Part(16596, 'Seal Ring');
+blocMeuleM10In_ring7.factoryId = '20505901';
+blocMeuleM10In_ring7.sectionMaga = 'F2 E-2';
+let blocMeuleM10In_spacer1 = new Part(16598, 'Ring Spacer');
+blocMeuleM10In_spacer1.factoryId = '20512925';
+blocMeuleM10In_spacer1.sectionMaga = 'F2 E-2';
+let blocMeuleM10In_spacer2 = new Part(97956, 'Spacer');
+blocMeuleM10In_spacer2.factoryId = '224388';
+blocMeuleM10In_spacer2.sectionMaga = 'F2 D-4';
+let blocMeuleM10In_spacer3 = new Part(97955, 'Spacer');
+blocMeuleM10In_spacer3.factoryId = '224391';
+blocMeuleM10In_spacer3.sectionMaga = 'F2 D-4';
+let blocMeuleM10In_stopperRing = new Part(17390, 'Stopper Ring');
+blocMeuleM10In_stopperRing.factoryId = '224387';
+blocMeuleM10In_stopperRing.description = 'Sur Réquisition';
+let blocMeuleM10In_shaft1 = new Part(17006, 'Shaft Grindstone');
+blocMeuleM10In_shaft1.factoryId = '224389';
+blocMeuleM10In_shaft1.sectionMaga = 'F2 C-5';
+let blocMeuleM10In_shaft2 = new Part(17058, 'Shaft');
+blocMeuleM10In_shaft2.factoryId = '224393';
+blocMeuleM10In_shaft2.sectionMaga = 'F2 D-5';
+let blocMeuleM10In_intGrindHolder = new Part(14934, 'Internal Grindstone Holder');
+blocMeuleM10In_intGrindHolder.factoryId = '224390';
+blocMeuleM10In_intGrindHolder.sectionmaga = 'F2 D-6';
+let blocMeuleM10In_spring = new Part(14790, 'Compression Spring');
+blocMeuleM10In_spring.factoryId = '23461679';
+blocMeuleM10In_spring.sectionMaga = 'F2 C-3';
+let blocMeuleM10In_fanMeule = new Part(21904, 'Fan De Meule');
+blocMeuleM10In_fanMeule.factoryId = '223880';
+blocMeuleM10In_fanMeule.sectionMaga = 'F2 D-7';
+
+let blocMeuleM10Ex_plug = new Part(96311, 'Plug');
+blocMeuleM10Ex_plug.factoryId = '224397';
+blocMeuleM10Ex_plug.sectionMaga = 'F2 D-4';
+let blocMeuleM10Ex_extGrindHolder = new Part(14932, 'External Grindstone Holder');
+blocMeuleM10Ex_extGrindHolder.factoryId = '224398';
+blocMeuleM10Ex_extGrindHolder.sectioMaga = 'f2 D-6';
+let blocMeuleM10Ex_shaft2 = new Part(16940, 'Shaft');
+blocMeuleM10Ex_shaft2.factoryId = '224399';
+blocMeuleM10Ex_shaft2.sectionMaga = 'F2 D-5';
+
+blocMeuleM10In.addPart(blocMeuleM10In_support);
+blocMeuleM10In.addPart(blocMeuleM10In_wheelGrind);
+blocMeuleM10In.addPart(blocMeuleM10In_stopRingNut);
+blocMeuleM10In.addPart(blocMeuleM10In_pinGasket);
+blocMeuleM10In.addPart(blocMeuleM10In_bushing1);
+blocMeuleM10In.addPart(blocMeuleM10In_bushing2);
+blocMeuleM10In.addPart(blocMeuleM10In_bushing3);
+blocMeuleM10In.addPart(blocMeuleM10In_ring1);
+blocMeuleM10In.addPart(blocMeuleM10In_ring2);
+blocMeuleM10In.addPart(blocMeuleM10In_ring3);
+blocMeuleM10In.addPart(blocMeuleM10In_ring4);
+blocMeuleM10In.addPart(blocMeuleM10In_ring5);
+blocMeuleM10In.addPart(blocMeuleM10In_ring6);
+blocMeuleM10In.addPart(blocMeuleM10In_ring7);
+blocMeuleM10In.addPart(blocMeuleM10In_spacer1);
+blocMeuleM10In.addPart(blocMeuleM10In_spacer2);
+blocMeuleM10In.addPart(blocMeuleM10In_spacer3);
+blocMeuleM10In.addPart(blocMeuleM10In_stopperRing);
+blocMeuleM10In.addPart(blocMeuleM10In_shaft1);
+blocMeuleM10In.addPart(blocMeuleM10In_shaft2);
+blocMeuleM10In.addPart(blocMeuleM10In_intGrindHolder);
+blocMeuleM10In.addPart(blocMeuleM10In_spring);
+blocMeuleM10In.addPart(blocMeuleM10In_fanMeule);
+
+blocMeuleM10Ex.addPart(blocMeuleM10In_support);
+blocMeuleM10Ex.addPart(blocMeuleM10In_wheelGrind);
+blocMeuleM10Ex.addPart(blocMeuleM10In_stopRingNut);
+blocMeuleM10Ex.addPart(blocMeuleM10In_pinGasket);
+blocMeuleM10Ex.addPart(blocMeuleM10In_bushing1);
+blocMeuleM10Ex.addPart(blocMeuleM10In_bushing2);
+blocMeuleM10Ex.addPart(blocMeuleM10In_bushing3);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring1);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring2);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring3);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring4);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring5);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring6);
+blocMeuleM10Ex.addPart(blocMeuleM10In_ring7);
+blocMeuleM10Ex.addPart(blocMeuleM10In_spacer1);
+blocMeuleM10Ex.addPart(blocMeuleM10In_spacer2);
+blocMeuleM10Ex.addPart(blocMeuleM10In_spacer3);
+blocMeuleM10Ex.addPart(blocMeuleM10In_stopperRing);
+blocMeuleM10Ex.addPart(blocMeuleM10In_shaft1);
+blocMeuleM10Ex.addPart(blocMeuleM10Ex_shaft2);
+blocMeuleM10Ex.addPart(blocMeuleM10Ex_extGrindHolder);
+blocMeuleM10Ex.addPart(blocMeuleM10In_spring);
+blocMeuleM10Ex.addPart(blocMeuleM10In_fanMeule);
+blocMeuleM10Ex.addPart(blocMeuleM10Ex_plug);
+//----blocMeuleM10 In&Ext----// End
 
 
 //----clutch TGC----//
@@ -745,13 +895,13 @@ gearbox_tigear01_ouputSeal.factoryId = '334273';
 gearbox_tigear01_ouputSeal.sectionMaga = 'C1 C-6';
 let gearbox_tigear01_serviceKitH = new Part(124, 'Service Kit');
 gearbox_tigear01_serviceKitH.factoryId = '20AHSERVICEKIT';
-gearbox_tigear01_serviceKitH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_serviceKitH.description = 'Sur réquisition';
 let gearbox_tigear01_inputSealH = new Part(125, 'Input Seal');
 gearbox_tigear01_inputSealH.factoryId = '334271';
-gearbox_tigear01_inputSealH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_inputSealH.description = 'Sur réquisition';
 let gearbox_tigear01_ouputSealH = new Part(126, 'Ouput Seal');
 gearbox_tigear01_ouputSealH.factoryId = '334276';
-gearbox_tigear01_ouputSealH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_ouputSealH.description = 'Sur réquisition';
 
 gearbox_tigear01.addPart(gearbox_tigear01_serviceKit);
 gearbox_tigear02.addPart(gearbox_tigear01_serviceKit);
@@ -867,60 +1017,60 @@ plyM15.addPart(Bearing_6001_2rs);
 //----plyM22----//
 let ply22_block = new Part(123, 'Block');
 ply22_block.factoryId = 'F018-0018';
-ply22_block.description = 'Sur rÃ©qusition';
+ply22_block.description = 'Sur réqusition';
 let ply22_stop = new Part(124, 'Stop');
 ply22_stop.factoryId = 'F002-2727';
-ply22_stop.description = 'Sur rÃ©quisition';
+ply22_stop.description = 'Sur réquisition';
 let ply22_felt = new Part(125, 'Felt');
 ply22_felt.factoryId = 'F009-5978';
-ply22_felt.description = 'Sur rÃ©quisition';
+ply22_felt.description = 'Sur réquisition';
 let ply22_support01 = new Part(126, 'Support');
 ply22_support01.factoryId = 'F009-3330'
-ply22_support01.description = 'Sur rÃ©quisition';
+ply22_support01.description = 'Sur réquisition';
 let ply22_plate01 = new Part(127, 'Plate');
 ply22_plate01.factoryId = 'F018-0005';
-ply22_plate01.description = 'Sur rÃ©quisition';
+ply22_plate01.description = 'Sur réquisition';
 let ply22_support02 = new Part(128, 'Support');
 ply22_support02.factoryId = 'F018-0010';
-ply22_support02.description = 'Sur rÃ©quisition';
+ply22_support02.description = 'Sur réquisition';
 let ply22_ballJoint = new Part(129, 'Bearing');
 ply22_ballJoint.factoryId = 'GE 25 ES-2RS';
-ply22_ballJoint.description = 'Sur rÃ©quisition';
+ply22_ballJoint.description = 'Sur réquisition';
 let ply22_shaft = new Part(130, 'Shaft');
 ply22_shaft.factoryId = 'F002-5010';
-ply22_shaft.description = 'Sur rÃ©quisition';
+ply22_shaft.description = 'Sur réquisition';
 let ply22_top = new Part(131, 'Top');
 ply22_top.factoryId = 'F002-5011';
-ply22_top.description = 'Sur RÃ©quisition';
+ply22_top.description = 'Sur Réquisition';
 let ply22_washer01 = new Part(132, 'Washer');
 ply22_washer01.factoryId = 'F002-5012';
-ply22_washer01.description = 'Sur rÃ©quisition';
+ply22_washer01.description = 'Sur réquisition';
 let ply22_limiter = new Part(133, 'Limiter');
 ply22_limiter.factoryId = 'F003-6819';
-ply22_limiter.description = 'Sur rÃ©quisition';
+ply22_limiter.description = 'Sur réquisition';
 let ply22_wheel = new Part(134, 'Wheel');
 ply22_wheel.factoryId = 'F018-0014';
-ply22_wheel.description = 'Sur rÃ©quisition';
+ply22_wheel.description = 'Sur réquisition';
 let ply22_threadRod = new Part(96130, 'Threaded Rod');
 ply22_threadRod.factoryId = 'F009-0148';
 ply22_threadRod.sectionMaga = 'KK2 D-8';
 let ply22_washer02 = new Part(135, 'Washer');
 ply22_washer02.factoryId = 'F001-7607';
-ply22_washer02.description = 'Sur rÃ©quisition';
+ply22_washer02.description = 'Sur réquisition';
 let ply22_key = new Part(136, 'Key');
 ply22_key.factoryId = 'A 5x5x16';
 let ply22_reg = new Part(137, 'Regulator');
 ply22_reg.factoryId = 'F009-1758';
-ply22_reg.description = 'Sur rÃ©quisition';
+ply22_reg.description = 'Sur réquisition';
 let ply22_plate02 = new Part(138, 'Plate');
 ply22_plate02.factoryId = 'F009-1760';
-ply22_plate02.description = 'Sur rÃ©quisition';
+ply22_plate02.description = 'Sur réquisition';
 let ply22_wingScrew = new Part(139, 'Wing Screw');
 ply22_wingScrew.factoryId = '65681';
-ply22_wingScrew.description = 'Sur rÃ©quisition';
+ply22_wingScrew.description = 'Sur réquisition';
 let ply22_knurl = new Part(99737, 'Molletage');
 ply22_knurl.factoryId = '017-13-98(01)';
-ply22_knurl.description = 'Sur RÃ©quisition';
+ply22_knurl.description = 'Sur Réquisition';
 
 plyM22.addPart(ply22_block);
 plyM22.addPart(ply22_stop);
@@ -987,28 +1137,69 @@ pusherRota.addPart(pusherRota_bearing01);
 
 
 //----relaxGripper----//
-let relaxGripper_fingerSup = new Part(15114, 'Fingers Support Gripper');
-relaxGripper_fingerSup.factoryId = 'B358003851 EL80';
+let relaxGripper_fingerSup = new Part(15114, 'Pick-Up Support');
+relaxGripper_fingerSup.factoryId = 'B358003851';
 relaxGripper_fingerSup.sectionMaga = 'I1 D-8';
-let relaxGripper_rotativePin = new Part(16742, 'Rotative Pin');
-relaxGripper_rotativePin.factoryId = 'B356003485 EL80';
+let relaxGripper_rotativePin = new Part(16742, 'Rotation Pin');
+relaxGripper_rotativePin.factoryId = 'B356003485';
 relaxGripper_rotativePin.sectionMaga = 'I1 D-9';
 let relaxGripper_spring = new Part(17236, 'Spring');
 relaxGripper_spring.factoryId = 'B358003226 EL80';
 relaxGripper_spring.sectionMaga = 'I1 D-9';
 let relaxGripper_flangeBushing = new Part(15160, 'Flange Bushing');
-relaxGripper_flangeBushing.factoryId = 'B421310014 E80';
+relaxGripper_flangeBushing.factoryId = 'B421310014';
 relaxGripper_flangeBushing.sectionMaga = 'I1 D-9';
-let relaxGripper_clampingModule = new Part(20877, 'Clamping Module');
-relaxGripper_clampingModule.factoryId = '13292 FES';
+let relaxGripper_clampingModule = new Part(20877, 'Mod.Block');
+relaxGripper_clampingModule.factoryId = 'B727313292';
 relaxGripper_clampingModule.sectionMaga = 'I2 F-4';
+let relaxGripper_tabPick = new Part(15396, 'Tab For Pick-Up Device');
+relaxGripper_tabPick.factoryId = 'B358003224';
+relaxGripper_tabPick.sectionMaga = 'I1 D-3';
+let relaxGripper_barHolder = new Part(14542, 'Bar Holder Plate');
+relaxGripper_barHolder.factoryId = 'B359001772';
+relaxGripper_barHolder.sectionMaga = 'I1 D-2';
+let relaxGripper_pickUpStop = new Part(01, 'Pick-Up Stop Block');
+relaxGripper_pickUpStop.factoryId = 'B358003225';
+relaxGripper_pickUpStop.description = 'Sur Réquisition';
 
 relaxGripper.addPart(relaxGripper_fingerSup);
 relaxGripper.addPart(relaxGripper_rotativePin);
 relaxGripper.addPart(relaxGripper_spring);
 relaxGripper.addPart(relaxGripper_flangeBushing);
 relaxGripper.addPart(relaxGripper_clampingModule);
+relaxGripper.addPart(relaxGripper_tabPick);
+relaxGripper.addPart(relaxGripper_barHolder);
+relaxGripper.addPart(relaxGripper_pickUpStop);
 //----relaxGripper----// End
+
+
+//----rabbitIR505----//
+let rabbitIR505_couteauAig = new Part(92772, 'Couteau Aiguisé');
+rabbitIR505_couteauAig.factoryId = '02501080 AIG';
+rabbitIR505_couteauAig.sectionMaga = 'E3 C-7';
+let rabbitIR505_couteauNeuf = new Part(25219, 'Couteau Neuf');
+rabbitIR505_couteauNeuf.factoryId = '02501080';
+rabbitIR505_couteauNeuf.sectionMaga = 'E3 C-7';
+let rabbitIR505_cuttingGroup = new Part(14926, 'Cutting Group');
+rabbitIR505_cuttingGroup.factoryId = '55A70002';
+rabbitIR505_cuttingGroup.sectionMaga = 'E3 C-4';
+let rabbitIR505_bracket = new Part(14282, 'Bracket');
+rabbitIR505_bracket.factoryId = '243034005';
+rabbitIR505_bracket.sectionMaga = 'E3 C-4';
+let rabbitIR505_shaft = new Part(15598 , 'Knife Holder Shaft');
+rabbitIR505_shaft.factoryId = '248019030'
+rabbitIR505_shaft.sectionMaga = 'E3 C-4';
+let rabbitIR505_taperWasher = new Part(16718, 'Taper Washer');
+rabbitIR505_taperWasher.factoryId = '24809031';
+rabbitIR505_taperWasher.sectionMaga = 'E3 C-4';
+
+rabbitIR505.addPart(rabbitIR505_couteauAig);
+rabbitIR505.addPart(rabbitIR505_couteauNeuf);
+rabbitIR505.addPart(rabbitIR505_cuttingGroup);
+rabbitIR505.addPart(rabbitIR505_bracket);
+rabbitIR505.addPart(rabbitIR505_shaft);
+rabbitIR505.addPart(rabbitIR505_taperWasher);
+//----rabbitIR505----// End
 
 
 //----hub lame kuos----// 

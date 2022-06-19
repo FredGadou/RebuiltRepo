@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Rebuilt Repo</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta name="author" content="Frédéric Gadoury">
+    <link rel="icon" type="image/x-icon" href="P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/maintLogo1.jpg">
+</head>
+
+<body>
+
+    <p id="incompatibilite" style="margin-left:100px">Incompatible avec Internet Explorer</p>
+    <div id="mainDiv" class="mainDiv">
+        <div id="mainPageTitleDiv" class="mainPageTitleDiv">
+            <h1 id="mainPageTitle">Rebuilt Repo</h1>
+        </div>
+        <div id="mainPageText" class="mainPageText">
+            <p>
+                Bienvenue au Rebuilt Repo!
+                <br>
+                <br>Le Rebuilt Repo est un projet voulant un accès facile à toutes les informations reliées aux pièces rebuilt.
+                <br>L'objectif est de partager les informations telles que les techiques de réparation et les pièces associées de manière rapide et compréhensible.
+                <br>Vous n'avez qu'à utiliser la barre de recherche et trouver une pièce à partir de n'importe quelle information associée à celle-ci.
+            </p>
+        </div>
+        <div id="showResultDiv" class="showResultDiv" style="display:none"></div>
+        <div id="rebuiltPresentationBox" class='rebuiltPresentationBox' style="display:none">
+            <div id="imgContainer" class="imgContainer">
+                <img id="rebuiltImg">
+            </div>
+            <div id="zoomLense" class="zoomLense" style="display:none">
+                <img id="rebuiltImgZoomed" class="rebuiltImgZoomed">
+            </div>
+            <div id="rebuiltNameDiv" class="rebuiltNameDiv">
+                <h2 id="rebuiltNameInPresentationBox" class="nameInPresentationBox"></h2>
+            </div>
+            <div class="presentationBox">
+                <div id="printPresBoxButton" class="printPresBoxButton">
+                    <p style="position: relative;margin: 0px;">Imprimer</p>
+                </div>
+                <div id="cascadesIdDiv" class="inPresentationBox">
+                    <label class="labelInPresentationBox">Cascades#:</label>
+                    <p id="cascadesIdInPresentationBox" class="pInPresentationBox"></p>
+                    <!-- <span class="material-symbols-outlined" id="cp_1">content_copy</span> -->
+                </div>
+                <div id="factoryIdDiv" class="inPresentationBox">
+                    <label class="labelInPresentationBox">Factory#:</label>
+                    <p id="factoryIdInPresentationBox" class="pInPresentationBox"></p>
+                    <!-- <span class="material-symbols-outlined" id="cp_2">content_copy</span> -->
+                </div>
+                <div id="rebuiltCompanyDiv" class="inPresentationBox">
+                    <label class="labelInPresentationBox">Compagnie:</label>
+                    <p id="rebuiltCompanyInPresentationBox" class="pInPresentationBox"></p>
+                    <!-- <span class="material-symbols-outlined" id="cp_3">content_copy</span> -->
+                </div>
+                <div id="sectionMagaDiv" class="inPresentationBox">
+                    <label class="labelInPresentationBox">Section Magasin:</label>
+                    <p id="sectionMagaInPresentationBox" class="pInPresentationBox"></p>
+                    <!-- <span class="material-symbols-outlined" id="cp_4">content_copy</span> -->
+                </div>
+                <div id="partListDiv" class="inPresentationBox">
+                    <label id="partListLabel" class="labelInPresentationBox">Parts List:</label>
+                    <ul id="partList" class="list">
+                    </ul>
+                </div>
+            </div>
+            <div id="reletedDocDiv" class="reletedDocDiv">
+                <h3 class="reletedDocTitle">Documents reliés</h3>
+                <div id="reletedDocLinkDiv" class="reletedDocLinkDiv"></div>
+            </div>
+        </div>
+        <div id="categoriesDiv" class="categoriesDiv" style="display:none">
+        </div>
+        <div id="usefullLinkDiv" class="categoriesDiv" style="display:none">
+        </div>
+        <div id="randomRebuiltDownDiv" class="randomRebuiltDownDiv">
+            <div id="leftArrowDiv" class="leftArrowDiv">
+                <span id="leftArrow" class="material-symbols-outlined">
+                    arrow_back_ios
+                </span>
+            </div>
+            <div id="rightArrowDiv" class="rightArrowDiv">
+                <span id="rightArrow" class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </div>
+            <div id="gridImgDiv" class="gridImgDiv">
+                <div id="rdImgDiv1" class="rdImgDiv1">
+                    <div id="tooltipDiv1" class="tooltipDiv">
+                        <div id="chatBubble1" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble1" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg1" class="rdImg">
+                </div>
+                <div id="rdImgDiv2" class="rdImgDiv2">
+                    <div id="tooltipDiv2" class="tooltipDiv">
+                        <div id="chatBubble2" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble2" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg2" class="rdImg">
+                </div>
+                <div id="rdImgDiv3" class="rdImgDiv3">
+                    <div id="tooltipDiv3" class="tooltipDiv">
+                        <div id="chatBubble3" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble3" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg3" class="rdImg">
+                </div>
+                <div id="rdImgDiv4" class="rdImgDiv4">
+                    <div id="tooltipDiv4" class="tooltipDiv">
+                        <div id="chatBubble4" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble4" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg4" class="rdImg">
+                </div>
+                <div id="rdImgDiv5" class="rdImgDiv5">
+                    <div id="tooltipDiv5" class="tooltipDiv">
+                        <div id="chatBubble5" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble5" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg5" class="rdImg">
+                </div>
+                <div id="rdImgDiv6" class="rdImgDiv6">
+                    <div id="tooltipDiv6" class="tooltipDiv">
+                        <div id="chatBubble6" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble6" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg6" class="rdImg">
+                </div>
+                <div id="rdImgDiv7" class="rdImgDiv7">
+                    <div id="tooltipDiv7" class="tooltipDiv">
+                        <div id="chatBubble7" class="chatBubble">
+                            <div class="chatBubbleTriangle"></div>
+                            <p id="nameInBubble7" class="nameInBubble"></p>
+                        </div>
+                    </div>
+                    <img id="rdImg7" class="rdImg">
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <div id="fixedTop" class="fixedTop"></div>
+    <div id="topDiv" class="topDiv">
+        <div id="pageCommandDiv" class="pageCommandDiv">
+            <div id="backPageCommand" class="backPageCommand">
+                <span class="material-symbols-outlined" id="backArrow">
+                    arrow_back_ios
+                </span>
+            </div>
+        </div>
+        <div id="menuIconDiv" class="menuIconDiv">
+            <span id="menuIcon" class="material-symbols-outlined">menu</span>
+        </div>
+        <div id="menuDropDownDiv" class="menuDropDownDiv" style="display:none">
+            <div id="companiesLinkDiv" class="menuLinkDiv">
+                <p class="inLinkDiv">Chercher par compagnie</p>
+            </div>
+            <div id="typeLinkDiv" class="menuLinkDiv">
+                <p class="inLinkDiv">Chercher par type</p>
+            </div>
+            <div id="usefullLinksDiv" class="menuLinkDiv">
+                <p class="inLinkDiv">Liens utiles</p>
+            </div>
+        </div>
+        <div id="searchDiv" class="searchDiv">
+            <span id="searchIcon" class="material-symbols-outlined">search</span>
+            <input type="text" id="searchInput" class="searchInput">
+            <div id="searchResultDiv" class="searchResultDiv">
+            </div>
+        </div>
+        <div id="maintLogo1Div" class="maintLogo1Div">
+            <img id="maintLogo1" src="P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/maint01.png">
+        </div>
+    </div>
+    <div id="fixedTopHidden" class="fixedTopHidden" style="display:none"></div>
+    
+    <div id="rebuiltPresentationBoxPrint" class='rebuiltPresentationBox' style="display:none;font-size: 15px; width: 500px;margin: 0 auto; margin-block: 40px;">
+        <div id="imgContainerPrint" class="imgContainer">
+            <img id="rebuiltImgPrint">
+        </div>
+        <div>
+            <div id="cascadesIdDivPrint" style="margin: 5px;margin-top: 10px">
+                <label class="labelInPresentationBox">Cascades#:</label>
+                <p id="cascadesIdInPresentationBoxPrint" class="pInPresentationBox"></p>
+            </div>
+            <div id="factoryIdDivPrint" style="margin: 5px;margin-top: 10px">
+                <label class="labelInPresentationBox">Factory#:</label>
+                <p id="factoryIdInPresentationBoxPrint" class="pInPresentationBox"></p>
+            </div>
+            <div id="rebuiltCompanyDivPrint" style="margin: 5px;margin-top: 10px">
+                <label class="labelInPresentationBox">Compagnie:</label>
+                <p id="rebuiltCompanyInPresentationBoxPrint" class="pInPresentationBox"></p>
+            </div>
+            <div id="sectionMagaDivPrint" style="margin: 5px;margin-top: 10px">
+                <label class="labelInPresentationBox">Section Magasin:</label>
+                <p id="sectionMagaInPresentationBoxPrint" class="pInPresentationBox"></p>
+            </div>
+            <div id="partListDivPrint" style="margin: 5px; margin-top: 15px;">
+                <label id="partListLabelPrint" class="labelInPresentationBox">Parts List:</label>
+                <ul id="partListPrint">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="jsFile/classes.js"></script>
+<script src="jsFile/rebuiltsList.js"></script>
+<script src="jsFile/appBehavior.js"></script>
+
+</html>
