@@ -9,7 +9,7 @@ class Company {
     constructor(company, list) {
         this.company = company;
         this.list = list;
-        this.img = `P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/${company}.jpg`;
+        this.img = `image/${company}.jpg`;
     }
 }
 
@@ -17,7 +17,7 @@ class Type {
     constructor(type, list) {
         this.type = type;
         this.list = list;
-        this.img = `P:/CTG-375%20Granby/Maintenance%20Mecanique/root/RebuiltRepo/image/${type}.jpg`;
+        this.img = `image/${type}.jpg`;
     }
 }
 
