@@ -116,7 +116,7 @@ p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-size: xx-large;
+    font-size: 32px;
 }
 
 .menuDropDownDiv {
@@ -148,7 +148,7 @@ p {
 
 .searchDiv {
     height: 30px;
-    width: 250px;
+    width: 315px;
     margin: 0 auto;
     margin-top: 38px;
     background-color: white;
@@ -162,7 +162,7 @@ p {
 
 .searchDivFixed {
     height: 30px;
-    width: 250px;
+    width: 315px;
     margin: 0 auto;
     margin-top: 10px;
     background-color: white;
