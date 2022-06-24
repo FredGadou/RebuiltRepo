@@ -518,7 +518,7 @@ atomiseurLSX.addPart(atomiseurLSX_gasket);
 let atomiseurForte_needle = new Part(15870, 'Needle Assembly');
 atomiseurForte_needle.factoryId = '28222-002-SS';
 atomiseurForte_needle.sectionMaga = 'Q2 D-8';
-let atomiseurForte_fluidCap = new Part(15185, 'Fluid Cap');
+let atomiseurForte_fluidCap = new Part(15186, 'Fluid Cap');
 atomiseurForte_fluidCap.factoryId = 'VF-1650-SS';
 atomiseurForte_fluidCap.sectionMaga = 'Q2 D-8';
 let atomiseurForte_oRing = new Part(15984, 'O-Ring');
