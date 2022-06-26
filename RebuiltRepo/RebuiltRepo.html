@@ -3,18 +3,18 @@
 
 <head>
     <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Frédéric Gadoury">
     <title>Rebuilt Repo</title>
     <link href="style/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <meta name="author" content="FrÃ©dÃ©ric Gadoury">
     <link rel="icon" type="image/x-icon" href="image/maintLogo1.jpg">
 </head>
 
 <body>
 
-    <p id="incompatibilite" style="margin-left:100px">Incompatible avec Internet Explorer</p>
+    <p id="incompatibilite" style="margin-left:100px">Erreur de chargement. Essayez un autre navigateur. Si problème persiste, veuillez communiquer avec Monsieur Fred</p>
     <div id="mainDiv" class="mainDiv">
         <div id="mainPageTitleDiv" class="mainPageTitleDiv">
             <h1 id="mainPageTitle">Rebuilt Repo</h1>
@@ -23,9 +23,9 @@
             <p>
                 Bienvenue au Rebuilt Repo!
                 <br>
-                <br>Le Rebuilt Repo est un projet voulant un accÃ¨s facile Ã  toutes les informations reliÃ©es aux piÃ¨ces rebuilt.
-                <br>L'objectif est de partager les informations telles que les techiques de rÃ©paration et les piÃ¨ces associÃ©es de maniÃ¨re rapide et comprÃ©hensible.
-                <br>Vous n'avez qu'Ã  utiliser la barre de recherche et trouver une piÃ¨ce Ã  partir de n'importe quelle information associÃ©e Ã  celle-ci.
+                <br>Le Rebuilt Repo est un projet voulant un accès facile à toutes les informations reliées aux pièces rebuilt.
+                <br>L'objectif est de partager les informations telles que les techiques de réparation et les pièces associées de manière rapide et compréhensible.
+                <br>Vous n'avez qu'à utiliser la barre de recherche et trouver une pièce à partir de n'importe quelle information associée à celle-ci.
             </p>
         </div>
         <div id="showResultDiv" class="showResultDiv" style="display:none"></div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div id="reletedDocDiv" class="reletedDocDiv">
-                <h3 class="reletedDocTitle">Documents reliÃ©s</h3>
+                <h3 class="reletedDocTitle">Documents reliés</h3>
                 <div id="reletedDocLinkDiv" class="reletedDocLinkDiv"></div>
             </div>
         </div>
@@ -220,6 +220,7 @@
 </body>
 
 <script src="data/rawdata.json"></script>
+<script src="jsFile/dataFetch.js"></script>
 <script src="jsFile/classes.js"></script>
 <script src="jsFile/rebuiltsList.js"></script>
 <script src="jsFile/appBehavior.js"></script>
