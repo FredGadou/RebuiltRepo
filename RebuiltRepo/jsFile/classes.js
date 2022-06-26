@@ -60,27 +60,32 @@ class RebuiltList {
         let cp = '';
         let tp = '';
 
-        switch (parameter) {
-            case 'none':
-                this.rList.forEach(rebuilt => {
-                    if (rebuilt.search(keyWord)) result.push(rebuilt);
-                });
-                return result;
-            case 'company':
-                this.rList.forEach(rebuilt => {
-                    cp = rebuilt.company;
-                    if (cp.toLowerCase() === keyWord) result.push(rebuilt);
-                });
-                return result;
-            case 'type':
-                this.rList.forEach(rebuilt => {
-                    tp = rebuilt.rebuiltClass;
-                    if (tp.toLowerCase() === keyWord) result.push(rebuilt);
-                });
-                return result;
+        if(keyWord === '@all') {
+            this.rList.forEach(rebuilt => {
+                result.push(rebuilt);
+            });
+            return result;
+        } else {
+            switch (parameter) {
+                case 'none':
+                    this.rList.forEach(rebuilt => {
+                        if (rebuilt.search(keyWord)) result.push(rebuilt);
+                    });
+                    return result;
+                case 'company':
+                    this.rList.forEach(rebuilt => {
+                        cp = rebuilt.company;
+                        if (cp.toLowerCase() === keyWord) result.push(rebuilt);
+                    });
+                    return result;
+                case 'type':
+                    this.rList.forEach(rebuilt => {
+                        tp = rebuilt.rebuiltClass;
+                        if (tp.toLowerCase() === keyWord) result.push(rebuilt);
+                    });
+                    return result;
+            }
         }
-
-
     }
 
 }

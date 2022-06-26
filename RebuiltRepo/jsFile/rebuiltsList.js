@@ -67,6 +67,7 @@ blocMeuleM10Ex.documentations = [
 
 let blocMeuleBretting = new Rebuilt(109, 'Bloc meule Bretting');
 blocMeuleBretting.rebuiltClass = 'Aiguisage';
+blocMeuleBretting.img = 'image/109.jpg';
 blocMeuleBretting.documentations = [
     ['Spare Parts', 'rebuiltDoc/bladeSharpenerBrettingLS.pdf']
 ];
@@ -108,6 +109,15 @@ clutchTGC200.documentations = [
     ['Operation and Maintenance Instructions', 'rebuiltdoc/InstallationManuals_Form_8322E.pdf']
 ];
 clutchTGC200.img = 'image/17574.jpg';
+
+let countCassettes = new Rebuilt(141, 'Count Cassettes');
+countCassettes.factoryId = 'Cout Cassettes';
+countCassettes.company = 'Bretting';
+countCassettes.rebuiltClass = 'Assembly';
+countCassettes.documentations = [
+    ['Exploded View', 'rebuiltdoc/countCassettesExplodedView.pdf']
+];
+countCassettes.img = 'image/141.jpg';
 
 let hubLameKuos = new Rebuilt(12779, "Hub lame Kuo's Assy");
 hubLameKuos.sectionMaga = 'D1 D-5';
@@ -179,6 +189,7 @@ relaxGripper.documentations = [
 ];
 
 let shaftBallouneEmb = new Rebuilt(120, 'Shaft balloune');
+shaftBallouneEmb.img = 'image/120.jpg';
 
 let slitterM12 = new Rebuilt(121, 'Slitter M12');
 slitterM12.rebuiltClass = 'Cutting';
@@ -197,6 +208,13 @@ slitterBretting.documentations = [
 ];
 slitterBretting.img = 'image/13224.jpg';
 
+let stappeuseCore = new Rebuilt(16735, 'Strapeuse À Core');
+stappeuseCore.factoryId = 'PLSTTENWHDU';
+stappeuseCore.sectionMaga = 'A2 A-4';
+stappeuseCore.documentations = [
+    ['Spare Part', 'rebuiltDoc/MIP-380 strap tensioner.pdf']
+];
+stappeuseCore.img = 'image/16735.jpg'; 
 
 
 
@@ -272,7 +290,7 @@ cyl_pne02.sectionMaga = 'F3 F-2';
 cyl_pne02.rebuiltClass = 'Cylindre';
 cyl_pne02.company = 'Pneumax';
 cyl_pne02.documentations = [
-    ['SÃ©rie 1348/1350', 'rebuiltDoc/1348.pdf']
+    ['Série 1348/1350', 'rebuiltDoc/1348.pdf']
 ]
 cyl_pne02.img = 'image/20205.jpg';
 
@@ -282,7 +300,7 @@ cyl_sco01.sectionMaga = 'C3 E-7';
 cyl_sco01.rebuiltClass = 'Cylindre';
 cyl_sco01.company = 'Scorpion';
 cyl_sco01.documentations = [
-    ['SÃ©rie 1319/1321', 'rebuiltDoc/1319.pdf'],
+    ['Série 1319/1321', 'rebuiltDoc/1319.pdf'],
     ['Series 1300 Accessories and fixing device', 'rebuiltDoc/EN_fixation_ISO.pdf']
 ];
 cyl_sco01.img = 'image/92889.jpg';
@@ -303,7 +321,7 @@ cyl_sco03.sectionMaga = 'P1 G-5';
 cyl_sco03.rebuiltClass = 'Cylindre';
 cyl_sco03.company = 'Scorpion';
 cyl_sco03.documentations = [
-    ['SÃ©rie 1319/1321', 'rebuiltDoc/1319.pdf'],
+    ['Série 1319/1321', 'rebuiltDoc/1319.pdf'],
     ['Series 1300 Accessories and fixing device', 'rebuiltDoc/EN_fixation_ISO.pdf']
 ];
 cyl_sco03.img = 'image/24200.jpg';
@@ -441,7 +459,7 @@ gearbox_tigear05.img = 'image/96135.jpg';
 //----0822125003(cyl)----// 
 let cyl_ave01_sparePart = new Part(123, 'Spare part kit - standard');
 cyl_ave01_sparePart.factoryId = 'R413000903';
-cyl_ave01_sparePart.description = 'Sur rÃ©quisition';
+cyl_ave01_sparePart.description = 'Sur réquisition';
 
 cyl_ave01.addPart(cyl_ave01_sparePart);
 //----0822125003(cyl)----// End
@@ -542,7 +560,7 @@ bmLSX_strokeAjBlock.sectionMaga = 'E2 C-7';
 let bmLSX_stopStrokeBlock = new Part(14218, 'Block');
 bmLSX_stopStrokeBlock.factoryId = '323005010';
 bmLSX_stopStrokeBlock.sectionMaga = 'E2 C-4';
-let bmLSX_linearBearing = new Part(14883, 'Brearing linÃ©aire');
+let bmLSX_linearBearing = new Part(14883, 'Brearing linéaire');
 bmLSX_linearBearing.factoryId = 'LBBR 12';
 bmLSX_linearBearing.sectionMaga = 'E2 F-8';
 let bmLSX_spacer = new Part(17182, 'Spacer');
@@ -560,7 +578,7 @@ bmLSX_couplingCyl.sectionMaga = 'E2  B-5';
 let bmLSX_cylBracket = new Part(19722, 'Bracket pour cylindre');
 bmLSX_cylBracket.factoryId = '350A47015';
 bmLSX_cylBracket.sectionMaga = 'E4 E-2';
-let bmLSX_shaftBracket = new Part(17076, 'Bracket pour rod linÃ©aire');
+let bmLSX_shaftBracket = new Part(17076, 'Bracket pour rod linéaire');
 bmLSX_shaftBracket.factoryId = '340A05007';
 bmLSX_shaftBracket.sectionMaga = 'E1  E-8';
 let bmLSX_couplingLovejoy = new Part(92619, 'Coupling style lovejoy');
@@ -578,7 +596,7 @@ bmLSX_body.sectionMaga = 'E3 B-4';
 let bmLSX_motor = new Part(24380, 'Moteur pneumatique');
 bmLSX_motor.factoryId = '1UP NRV-3A';
 bmLSX_motor.sectionMaga = 'E2 A-9';
-let bmLSX_shaft1 = new Part(17018, 'Shaft LinÃ©aire');
+let bmLSX_shaft1 = new Part(17018, 'Shaft Linéaire');
 bmLSX_shaft1.factoryId = 'Shaft 10mm x 150mm';
 bmLSX_shaft1.sectionMaga = 'E1 B-14';
 
@@ -607,7 +625,7 @@ blocMeuleBretting_cyl.factoryId = 'BHH118 1/8';
 blocMeuleBretting_cyl.sectionMaga = 'LL2 D-3';
 let blocMeuleBretting_bearin01 = new Part(65515, 'Bearing');
 blocMeuleBretting_bearin01.factoryId = '5201A-2RS';
-blocMeuleBretting_bearin01.description = 'Sur rÃ©quisition';
+blocMeuleBretting_bearin01.description = 'Sur réquisition';
 let blocMeuleBretting_wheelGrd = new Part(13259, 'Wheel-Grinding');
 blocMeuleBretting_wheelGrd.factoryId = 'CBN4-180-75V';
 blocMeuleBretting_wheelGrd.sectionMaga = 'L2 B-2';
@@ -665,7 +683,7 @@ blocMeuleM10In_stopRingNut.factoryId = '223872';
 blocMeuleM10In_stopRingNut.sectionMaga = 'F2 C-5';
 let blocMeuleM10In_pinGasket = new Part(96164, 'Pin Gasket');
 blocMeuleM10In_pinGasket.factoryId = '223875';
-blocMeuleM10In_pinGasket.description = 'Sur rÃ©quisition';
+blocMeuleM10In_pinGasket.description = 'Sur réquisition';
 let blocMeuleM10In_bushing1 = new Part(91450, 'Bushing');
 blocMeuleM10In_bushing1.factoryId = '224385';
 blocMeuleM10In_bushing1.sectionMaga = 'F2 A-7';
@@ -677,7 +695,7 @@ blocMeuleM10In_bushing3.factoryId = '21171696';
 blocMeuleM10In_bushing3.sectionMaga = 'F1 C-6';
 let blocMeuleM10In_ring1 = new Part(97041, 'Ring');
 blocMeuleM10In_ring1.factoryId = '224384';
-blocMeuleM10In_ring1.description = 'Sur rÃ©quisition';
+blocMeuleM10In_ring1.description = 'Sur réquisition';
 let blocMeuleM10In_ring2 = new Part(16590, 'Ring');
 blocMeuleM10In_ring2.factoryId = '20512428';
 blocMeuleM10In_ring2.sectionMaga = 'F2 A-6';
@@ -707,7 +725,7 @@ blocMeuleM10In_spacer3.factoryId = '224391';
 blocMeuleM10In_spacer3.sectionMaga = 'F2 D-4';
 let blocMeuleM10In_stopperRing = new Part(17390, 'Stopper Ring');
 blocMeuleM10In_stopperRing.factoryId = '224387';
-blocMeuleM10In_stopperRing.description = 'Sur RÃ©quisition';
+blocMeuleM10In_stopperRing.description = 'Sur Réquisition';
 let blocMeuleM10In_shaft1 = new Part(17006, 'Shaft Grindstone');
 blocMeuleM10In_shaft1.factoryId = '224389';
 blocMeuleM10In_shaft1.sectionMaga = 'F2 C-5';
@@ -848,6 +866,103 @@ clutchTGC200.addPart(clutchTGC200_spring01);
 //----clutch TGC----// End
 
 
+//----countCassettes----//
+let countCassettes_idlerStud1 = new Part(142, 'Idler Stud Mount');
+countCassettes_idlerStud1.factoryId = '4816-391';
+countCassettes_idlerStud1.description = 'Sur Réquisition';
+let countCassettes_pneuHeader1 = new Part(143, 'Pneumatic Header');
+countCassettes_pneuHeader1.factoryId = '7070-154';
+countCassettes_pneuHeader1.description = 'Sur Réquisition';
+let countCassettes_shim1 = new Part(144, 'Shim 0.020');
+countCassettes_shim1.factoryId = '33001814';
+countCassettes_shim1.description = 'Sur Réquisition';
+let countCassettes_bearing1 = new Part(65515, 'Bearing');
+countCassettes_bearing1.factoryId = '5201A-2RS';
+countCassettes_bearing1.description = 'Sur Réquisition';
+let countCassettes_nylSpurGear = new Part(65285, 'Nylatron Spur Gear');
+countCassettes_nylSpurGear.factoryId = '2132-119';
+countCassettes_nylSpurGear.sectionMaga = 'CAIS. B';
+let countCassettes_timingSprRework1 = new Part(145, 'Timing Sprocket Reworked');
+countCassettes_timingSprRework1.factoryId = '3514-713';
+countCassettes_timingSprRework1.description = 'Sur Réquisition';
+let countCassettes_shim2 = new Part(146, 'Shim 0.015');
+countCassettes_shim2.factoryId = '33001815';
+countCassettes_shim2.description = 'Sur Réquisition';
+let countCassettes_beltGuide1 = new Part(65201, 'Belt Guide');
+countCassettes_beltGuide1.factoryId = '4422-291';
+countCassettes_beltGuide1.sectionMaga = 'CAIS. M';
+let countCassettes_sheppBelt = new Part(65258, 'Courroie Verte');
+countCassettes_sheppBelt.factoryId = '02010822';
+countCassettes_sheppBelt.sectionMaga = 'CAIS. P';
+let countCassettes_idlerStud2 = new Part(147, 'Idler Stud Mount');
+countCassettes_idlerStud2.factoryId = '4816-397';
+countCassettes_idlerStud2.description = 'Sur Réquisition';
+let countCassettes_pneuHeader2 = new Part(148, 'Pneumatic Header');
+countCassettes_pneuHeader2.factoryId = '7070-153';
+countCassettes_pneuHeader2.description = 'Sur Réquisition';
+let countCassettes_idlerStud3 = new Part(149, 'Idler Stud Mount');
+countCassettes_idlerStud3.factoryId = '4816-398';
+countCassettes_idlerStud3.description = 'Sur Réquisition';
+let countCassettes_coverPlate = new Part(150, 'Gear Cassette Cover Plate');
+countCassettes_coverPlate.factoryId = '2704-825';
+countCassettes_coverPlate.description = 'Sur Réquisition';
+let countCassettes_compSpring = new Part(65427, 'Compression Spring');
+countCassettes_compSpring.factoryId = '48000365';
+countCassettes_compSpring.description = 'Sur Réquisition';
+let countCassettes_suppSpacer = new Part(151, 'Support Spacer');
+countCassettes_suppSpacer.factoryId = '4981-762';
+countCassettes_suppSpacer.description = 'Sur Réquisition';
+let countCassettes_beltGuide2 = new Part(152, 'Belt Guide');
+countCassettes_beltGuide2.factoryId = '4422-308';
+countCassettes_beltGuide2.description = 'Sur Réquisition';
+let countCassettes_beltGuide3 = new Part(65135, 'Belt Guide');
+countCassettes_beltGuide3.factoryId = '4422-296';
+countCassettes_beltGuide3.sectionMaga = 'CAIS. M';
+let countCassettes_idler1 = new Part(65136, 'Idler Stud');
+countCassettes_idler1.factoryId = '909-680';
+countCassettes_idler1.sectionMaga = 'CAIS. M';
+let countCassettes_timingSprRework2 = new Part(65277, 'Timing Sprocket Reworked');
+countCassettes_timingSprRework2.factoryId = '3514-691';
+countCassettes_timingSprRework2.sectionMaga = 'CAIS. M';
+let countCassettes_flangedBearing = new Part(65218, 'Oilite Flanged Bearing');
+countCassettes_flangedBearing.factoryId = 'FF-310-3';
+countCassettes_flangedBearing.sectionMaga = 'CAIS. M';
+let countCassettes_cassFrame = new Part(153, 'Gear Driven Cassette Frame');
+countCassettes_cassFrame.factoryId = '2704-824';
+countCassettes_cassFrame.description = 'Sur Réquisition';
+let countCassettes_driveShaft = new Part(154, 'Drive Shaft');
+countCassettes_driveShaft.factoryId = '2622-698';
+countCassettes_driveShaft.description = 'Sur Réquisition';
+let countCassettes_idlerStud4 = new Part(155, 'Idler Stud Mount');
+countCassettes_idlerStud4.factoryId = '4816-392';
+countCassettes_idlerStud4.description = 'Sur Réquisition';
+
+countCassettes.addPart(countCassettes_idlerStud1);
+countCassettes.addPart(countCassettes_pneuHeader1);
+countCassettes.addPart(countCassettes_shim1);
+countCassettes.addPart(countCassettes_bearing1);
+countCassettes.addPart(countCassettes_nylSpurGear);
+countCassettes.addPart(countCassettes_timingSprRework1);
+countCassettes.addPart(countCassettes_shim2);
+countCassettes.addPart(countCassettes_beltGuide1);
+countCassettes.addPart(countCassettes_sheppBelt);
+countCassettes.addPart(countCassettes_idlerStud2);
+countCassettes.addPart(countCassettes_pneuHeader2);
+countCassettes.addPart(countCassettes_idlerStud3);
+countCassettes.addPart(countCassettes_coverPlate);
+countCassettes.addPart(countCassettes_compSpring);
+countCassettes.addPart(countCassettes_suppSpacer);
+countCassettes.addPart(countCassettes_beltGuide2);
+countCassettes.addPart(countCassettes_beltGuide3);
+countCassettes.addPart(countCassettes_idler1);
+countCassettes.addPart(countCassettes_timingSprRework2);
+countCassettes.addPart(countCassettes_flangedBearing);
+countCassettes.addPart(countCassettes_cassFrame);
+countCassettes.addPart(countCassettes_driveShaft);
+countCassettes.addPart(countCassettes_idlerStud4);
+//----countCassettes----// End
+
+
 //----Cylindre cyl_sco1319----//
 let cyl_sco03_repairKit = new Part(50284, 'Repair Kit');
 cyl_sco03_repairKit.factoryId = 'RG1319/0006';
@@ -895,13 +1010,13 @@ gearbox_tigear01_ouputSeal.factoryId = '334273';
 gearbox_tigear01_ouputSeal.sectionMaga = 'C1 C-6';
 let gearbox_tigear01_serviceKitH = new Part(124, 'Service Kit');
 gearbox_tigear01_serviceKitH.factoryId = '20AHSERVICEKIT';
-gearbox_tigear01_serviceKitH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_serviceKitH.description = 'Sur réquisition';
 let gearbox_tigear01_inputSealH = new Part(125, 'Input Seal');
 gearbox_tigear01_inputSealH.factoryId = '334271';
-gearbox_tigear01_inputSealH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_inputSealH.description = 'Sur réquisition';
 let gearbox_tigear01_ouputSealH = new Part(126, 'Ouput Seal');
 gearbox_tigear01_ouputSealH.factoryId = '334276';
-gearbox_tigear01_ouputSealH.description = 'Sur rÃ©quisition';
+gearbox_tigear01_ouputSealH.description = 'Sur réquisition';
 
 gearbox_tigear01.addPart(gearbox_tigear01_serviceKit);
 gearbox_tigear02.addPart(gearbox_tigear01_serviceKit);
@@ -1017,60 +1132,60 @@ plyM15.addPart(Bearing_6001_2rs);
 //----plyM22----//
 let ply22_block = new Part(123, 'Block');
 ply22_block.factoryId = 'F018-0018';
-ply22_block.description = 'Sur rÃ©qusition';
+ply22_block.description = 'Sur réqusition';
 let ply22_stop = new Part(124, 'Stop');
 ply22_stop.factoryId = 'F002-2727';
-ply22_stop.description = 'Sur rÃ©quisition';
+ply22_stop.description = 'Sur réquisition';
 let ply22_felt = new Part(125, 'Felt');
 ply22_felt.factoryId = 'F009-5978';
-ply22_felt.description = 'Sur rÃ©quisition';
+ply22_felt.description = 'Sur réquisition';
 let ply22_support01 = new Part(126, 'Support');
 ply22_support01.factoryId = 'F009-3330'
-ply22_support01.description = 'Sur rÃ©quisition';
+ply22_support01.description = 'Sur réquisition';
 let ply22_plate01 = new Part(127, 'Plate');
 ply22_plate01.factoryId = 'F018-0005';
-ply22_plate01.description = 'Sur rÃ©quisition';
+ply22_plate01.description = 'Sur réquisition';
 let ply22_support02 = new Part(128, 'Support');
 ply22_support02.factoryId = 'F018-0010';
-ply22_support02.description = 'Sur rÃ©quisition';
+ply22_support02.description = 'Sur réquisition';
 let ply22_ballJoint = new Part(129, 'Bearing');
 ply22_ballJoint.factoryId = 'GE 25 ES-2RS';
-ply22_ballJoint.description = 'Sur rÃ©quisition';
+ply22_ballJoint.description = 'Sur réquisition';
 let ply22_shaft = new Part(130, 'Shaft');
 ply22_shaft.factoryId = 'F002-5010';
-ply22_shaft.description = 'Sur rÃ©quisition';
+ply22_shaft.description = 'Sur réquisition';
 let ply22_top = new Part(131, 'Top');
 ply22_top.factoryId = 'F002-5011';
-ply22_top.description = 'Sur RÃ©quisition';
+ply22_top.description = 'Sur Réquisition';
 let ply22_washer01 = new Part(132, 'Washer');
 ply22_washer01.factoryId = 'F002-5012';
-ply22_washer01.description = 'Sur rÃ©quisition';
+ply22_washer01.description = 'Sur réquisition';
 let ply22_limiter = new Part(133, 'Limiter');
 ply22_limiter.factoryId = 'F003-6819';
-ply22_limiter.description = 'Sur rÃ©quisition';
+ply22_limiter.description = 'Sur réquisition';
 let ply22_wheel = new Part(134, 'Wheel');
 ply22_wheel.factoryId = 'F018-0014';
-ply22_wheel.description = 'Sur rÃ©quisition';
+ply22_wheel.description = 'Sur réquisition';
 let ply22_threadRod = new Part(96130, 'Threaded Rod');
 ply22_threadRod.factoryId = 'F009-0148';
 ply22_threadRod.sectionMaga = 'KK2 D-8';
 let ply22_washer02 = new Part(135, 'Washer');
 ply22_washer02.factoryId = 'F001-7607';
-ply22_washer02.description = 'Sur rÃ©quisition';
+ply22_washer02.description = 'Sur réquisition';
 let ply22_key = new Part(136, 'Key');
 ply22_key.factoryId = 'A 5x5x16';
 let ply22_reg = new Part(137, 'Regulator');
 ply22_reg.factoryId = 'F009-1758';
-ply22_reg.description = 'Sur rÃ©quisition';
+ply22_reg.description = 'Sur réquisition';
 let ply22_plate02 = new Part(138, 'Plate');
 ply22_plate02.factoryId = 'F009-1760';
-ply22_plate02.description = 'Sur rÃ©quisition';
+ply22_plate02.description = 'Sur réquisition';
 let ply22_wingScrew = new Part(139, 'Wing Screw');
 ply22_wingScrew.factoryId = '65681';
-ply22_wingScrew.description = 'Sur rÃ©quisition';
+ply22_wingScrew.description = 'Sur réquisition';
 let ply22_knurl = new Part(99737, 'Molletage');
 ply22_knurl.factoryId = '017-13-98(01)';
-ply22_knurl.description = 'Sur RÃ©quisition';
+ply22_knurl.description = 'Sur Réquisition';
 
 plyM22.addPart(ply22_block);
 plyM22.addPart(ply22_stop);
@@ -1158,9 +1273,9 @@ relaxGripper_tabPick.sectionMaga = 'I1 D-3';
 let relaxGripper_barHolder = new Part(14542, 'Bar Holder Plate');
 relaxGripper_barHolder.factoryId = 'B359001772';
 relaxGripper_barHolder.sectionMaga = 'I1 D-2';
-let relaxGripper_pickUpStop = new Part(01, 'Pick-Up Stop Block');
+let relaxGripper_pickUpStop = new Part(140, 'Pick-Up Stop Block');
 relaxGripper_pickUpStop.factoryId = 'B358003225';
-relaxGripper_pickUpStop.description = 'Sur RÃ©quisition';
+relaxGripper_pickUpStop.description = 'Sur Réquisition';
 
 relaxGripper.addPart(relaxGripper_fingerSup);
 relaxGripper.addPart(relaxGripper_rotativePin);
@@ -1174,7 +1289,7 @@ relaxGripper.addPart(relaxGripper_pickUpStop);
 
 
 //----rabbitIR505----//
-let rabbitIR505_couteauAig = new Part(92772, 'Couteau AiguisÃ©');
+let rabbitIR505_couteauAig = new Part(92772, 'Couteau Aiguisé');
 rabbitIR505_couteauAig.factoryId = '02501080 AIG';
 rabbitIR505_couteauAig.sectionMaga = 'E3 C-7';
 let rabbitIR505_couteauNeuf = new Part(25219, 'Couteau Neuf');
@@ -1200,6 +1315,35 @@ rabbitIR505.addPart(rabbitIR505_bracket);
 rabbitIR505.addPart(rabbitIR505_shaft);
 rabbitIR505.addPart(rabbitIR505_taperWasher);
 //----rabbitIR505----// End
+
+
+//----stappeuseCore----//
+let stappeuseCore_spring1 = new Part(24035, 'Spring');
+stappeuseCore_spring1.factoryId = 'M380-2G';
+stappeuseCore_spring1.sectionMaga = 'V1 D-1';
+let stappeuseCore_spring2 = new Part(24033, 'Spring');
+stappeuseCore_spring2.factoryId = 'M380-11B';
+stappeuseCore_spring2.sectionMaga = 'V1 D-1';
+let stappeuseCore_spring3 = new Part(24039, 'Spring');
+stappeuseCore_spring3.factoryId = 'M380-16B';
+stappeuseCore_spring3.sectionMaga = 'V1 D-1';
+let stappeuseCore_spring4 = new Part(30076, 'Spring');
+stappeuseCore_spring4.factoryId = 'M380-6';
+stappeuseCore_spring4.sectionMaga = 'V1 D-1';
+let stappeuseCore_blade = new Part(24041, 'Cutter Blade');
+stappeuseCore_blade.factoryId = 'M380-1B';
+stappeuseCore_blade.sectionMaga = 'V1 D-1';
+let stappeuseCore_gripper = new Part(24043, 'Gripper Foot');
+stappeuseCore_gripper.factoryId = 'M380-2E';
+stappeuseCore_gripper.sectionMaga = 'V1 D-1';
+
+stappeuseCore.addPart(stappeuseCore_spring1);
+stappeuseCore.addPart(stappeuseCore_spring2);
+stappeuseCore.addPart(stappeuseCore_spring3);
+stappeuseCore.addPart(stappeuseCore_spring4);
+stappeuseCore.addPart(stappeuseCore_blade);
+stappeuseCore.addPart(stappeuseCore_gripper);
+//----stappeuseCore----// End
 
 
 //----hub lame kuos----// 
@@ -1255,7 +1399,8 @@ rebuiltList.addRebuilt(carriageMandrelIR505Droit);
 rebuiltList.addRebuilt(chaineLanceurLSX);
 rebuiltList.addRebuilt(clutchTGC20);
 rebuiltList.addRebuilt(clutchTGC60);
-rebuiltList.addRebuilt(clutchTGC200);
+rebuiltList.addRebuilt(clutchTGC200);  
+rebuiltList.addRebuilt(countCassettes);
 rebuiltList.addRebuilt(hubLameKuos);
 rebuiltList.addRebuilt(plyIR505);
 rebuiltList.addRebuilt(plyM10);
@@ -1269,7 +1414,8 @@ rebuiltList.addRebuilt(rabbitIR505);
 rebuiltList.addRebuilt(relaxGripper);
 rebuiltList.addRebuilt(shaftBallouneEmb);
 rebuiltList.addRebuilt(slitterM12);
-rebuiltList.addRebuilt(slitterBretting);
+rebuiltList.addRebuilt(slitterBretting);  
+rebuiltList.addRebuilt(stappeuseCore);
 rebuiltList.addRebuilt(cyl_ave01);
 rebuiltList.addRebuilt(cyl_ave02);
 rebuiltList.addRebuilt(cyl_bos01);
