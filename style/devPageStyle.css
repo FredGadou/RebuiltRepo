@@ -1,0 +1,137 @@
+.commandDiv {
+	position: relative;
+	width: 260px;
+	margin: 0 auto;
+}
+
+.sideContentDev {
+    width: 259px;
+    font-size: 20px;
+    position: absolute;
+    margin: 5px;
+}
+
+.inSideContentDev {
+    padding: 15px;
+    background-color: lightgrey;
+    padding-block: 20px;
+    margin: 2px;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.devPageContentDiv {
+	position: relative;
+    width: 100%;
+    margin-block: 100px;
+    margin-left: 365px;
+}
+
+.winInDevPage {
+	width: 630px;
+}
+
+.topWinInDevPage {
+	position: relative;
+    width: 100%;
+    height: 32px;
+    background-color: darkgray;
+    border: solid;
+    border-width: 2px;
+    padding-inline-end: 375px;
+}
+
+.centerWinInDevPage {
+	position: relative;
+    padding-block-start: 44px;
+    text-align: center;
+    border-inline: solid;
+    border-block-end: solid;
+    border-width: 2px;
+    width: 100%;
+    padding-inline-end: 375px;
+	background-color: #b1d6fb;
+}
+
+.titleInTopDevPage {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+    padding-block: 5px;
+    font-size: 20px;
+}
+
+.devPage {
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.XiconDiv{
+	position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+}
+
+.tipWinDiv {
+	background-color: lightgray;
+    height: 400px;
+    width: 330px;
+    border-radius: 20px;
+    position: absolute;
+    left: 650px;
+    top: 50px;
+	text-align: start;
+	padding: 10px;
+}
+
+.tipWinTitleDiv{
+	font-size: 30px;
+	text-align: center;
+}
+
+.lineInWinCreatReb {
+    padding-block: 10px;
+}
+
+.fhLineInWinCreatReb {
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    position: absolute;
+    left: 50px;
+}
+
+.creatRebInput {
+    position: relative;
+    left: 80px;
+    width: 235px;
+}
+
+.creatRebLabel {
+	font-size: 17px; 
+}
+
+.creatRepPartInput {
+	position: absolute;
+	right: 400px;
+}
+
+.creatRepPartLabel {
+	margin: 5px;
+}
+
+.addPartBtnDiv {
+	
+	margin-top: 25px;
+	text-align: end;
+	padding-inline-end: 25px;
+}
+
+.downBtnDiv {
+	padding-block-start: 70px;
+    padding-block-end: 15px;
+    padding-left: 210px;
+}
