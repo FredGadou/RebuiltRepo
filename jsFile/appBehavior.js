@@ -1047,7 +1047,7 @@ function printRebuilt(rebuilt) {
         let lastParam;
         if (parseInt(part.cascadesId) < 1000) {
             secondParam = 'N/A';
-            lastParam = 'Sur Réquisition';
+            lastParam = 'Sur RÃ©quisition';
         } else {
             secondParam = part.cascadesId;
             lastParam = 'Section: ' + part.sectionMaga;

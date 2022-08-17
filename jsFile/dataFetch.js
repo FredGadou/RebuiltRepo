@@ -1,20 +1,29 @@
-/*
+
 let itemsStocks = new Map();            // Use to check stock of item.
 										// Cannot use atm.. no easy way to update data daily because cascades....
 items.forEach(item => {                 // items is the content of rawdata.json 
     let itemID = item.ITVITM;
     let itemStock = item.IITVQMA;
-    itemsStocks.set(itemID,{stock:itemStock});
+	let itemSection = item.ITVEMP;
+    itemsStocks.set(itemID,{stock:itemStock, sectionMaga:itemSection});
 });
 
 function getItemStock(cascadesId) {
     if(cascadesId>=10000 && itemsStocks.has(cascadesId)){
-        return itemsStock.get(cascadesId).stock;
+        return itemsStocks.get(cascadesId).stock;
     } else {
         return 0;
     }
 }
-*/
+
+function getItemSectionMag(cascadesId) {
+	if(cascadesId>=10000 && itemsStocks.has(cascadesId.toString())){
+        return itemsStocks.get(cascadesId.toString()).sectionMaga;
+    } else {
+        return '';
+    }
+}
+
 function toSetRebuiltList() {
 	let rList = new RebuiltList();
 	
@@ -44,3 +53,4 @@ function toSetRebuiltList() {
 	
 	return rList;
 }
+

@@ -1,4 +1,4 @@
-﻿class Company {
+class Company {
     constructor(company, list) {
         this.company = company;
         this.list = list;
@@ -97,6 +97,7 @@ class Rebuilt {
         this.cascadesId = id;
         this.factoryId = '';
         this.name = name;
+		this.description = '';
         this.sectionMaga = '';
         this.partList = new Map();
         this.rebuiltClass = '';
@@ -161,7 +162,6 @@ class Rebuilt {
         if (this.company.toLowerCase().includes(keyWord)) return this.company;
     }
 }
-
 
 class Part {
     constructor(id, name) {

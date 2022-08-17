@@ -3,6 +3,7 @@ let devPageContentDiv = document.getElementById('devPageContentDiv');
 let createNewRebBtn = document.getElementById('createNewRebBtn');
 let saveDataBtn = document.getElementById('saveDataBtn');
 let modifyRebuiltBtn = document.getElementById('modifyRebuiltBtn');
+let isCreateRebWinOpen = false;
 
 commandInput.addEventListener('keydown', e => {
     if (e.keyCode != 13) return;
@@ -86,7 +87,7 @@ function openDevPageAccess() {
                 alert('Oupsss');
                 break;
             case 2:
-                alert("Pas d'affaire ici toé je pense...");
+                alert("Pas d'affaire ici toÃ© je pense...");
                 break;
             case 3:
                 alert('Attention mon ami...');
@@ -117,7 +118,7 @@ function openDevPageAccess() {
                 alert('Oupsss');
                 break;
             case 2:
-                alert("Pas d'affaire ici toé je pense...");
+                alert("Pas d'affaire ici toÃ© je pense...");
                 break;
             case 3:
                 alert('Attention mon ami...');
@@ -143,7 +144,8 @@ function openDevPageAccess() {
 }
 
 function openCreateRebuilt() {
-	
+	if(isCreateRebWinOpen) return;
+	isCreateRebWinOpen = true;
     let creationPageDiv = document.createElement('div');
     let creationTopDiv = document.createElement('div');
     let creationTitleDiv = document.createElement('div');
@@ -251,7 +253,7 @@ function openCreateRebuilt() {
 	tipImgDiv.appendChild(tipImgP);
 	tipDocDiv.appendChild(tipDocP);
 	
-	tipImgP.innerHTML = `<b><u>Pour Ajouter Une Image:</u></b><br>Vous devez placer l'image au chemin suivant: <p style="color:blue">P:&#92CTG-375 Granby&#92Maintenance Mecanique&#92root&#92RebuiltRepo&#92image</p>L'image doit se nommer par son #cascades et contenir l'extention '.jpg'. Si la pièce ne possède pas de #cascades, le programme vas lui donner un numéro fictif, Vous utiliserez celui-ci pour identifier l'image.`;
+	tipImgP.innerHTML = `<b><u>Pour Ajouter Une Image:</u></b><br>Vous devez placer l'image au chemin suivant: <p style="color:blue">P:&#92CTG-375 Granby&#92Maintenance Mecanique&#92root&#92RebuiltRepo&#92image</p>L'image doit se nommer par son #cascades et contenir l'extention '.jpg'. Si la piÃ¨ce ne possÃ¨de pas de #cascades, le programme vas lui donner un numÃ©ro fictif, Vous utiliserez celui-ci pour identifier l'image.`;
 	tipWinTitle.innerHTML = 'How To';
 	tipDocP.innerHTML = `<b><u>Pour Ajouter Un Document:</u></b><br>Vous devez placer le document au chemin suivant: <p style="color:blue">P:&#92CTG-375 Granby&#92Maintenance Mecanique&#92root&#92RebuiltRepo&#92rebuiltDoc</p>`;
 	
@@ -351,7 +353,7 @@ function openCreateRebuilt() {
 		newPart.factoryId = addPartFctyIDInput.value;
 		newPart.sectionMaga = addPartSectMagaInput.value;
 		if(addPartSectMagaInput.value === '' || addPartSectMagaInput.value === ' '){
-			newPart.description = 'Sur Réquisition';
+			newPart.description = 'Sur RÃ©quisition';
 		}
 		
 		partListToAdd.set(addPartCSIDInput.value,newPart);
@@ -484,7 +486,10 @@ function openCreateRebuilt() {
     cancelBtn.innerHTML = 'Annuler';
     cancelBtn.style.marginInline = '20px';
 	cancelBtn.style.fontSize = 'x-large';
-    cancelBtn.onclick = () => {creationPageDiv.remove();}
+    cancelBtn.onclick = () => {
+		creationPageDiv.remove();
+		isCreateRebWinOpen = false;
+}
 	
     acceptBtn.innerHTML = 'OK';
     acceptBtn.style.marginInline = '20px';
@@ -502,21 +507,25 @@ function openCreateRebuilt() {
         newRebuilt.rebuiltClass = rClassSelec.value;
 		newRebuilt.img = `image/${newRebID}.jpg`
 		partListToAdd.forEach(part => {
+			if(part.cascadesId === '' || part.cascadesId === ' ') {
+				part.cascadesId = rebuiltList.getFictiveNum();
+			}
 			newRebuilt.addPart(part);
 		});
 		newRebuilt.documentations = docList;
         rebuiltList.addRebuilt(newRebuilt);
-		alert(`Nouveau Rebuilt créé: #cascades: ${newRebuilt.cascadesId}, Nom: ${newRebuilt.name}.\nVous devez sauvegarder pour que les changements prennent effet`)
+		alert(`Nouveau Rebuilt crÃ©Ã©: #cascades: ${newRebuilt.cascadesId}, Nom: ${newRebuilt.name}.\nVous devez sauvegarder pour que les changements prennent effet`)
         creationPageDiv.remove();
+		isCreateRebWinOpen = false;
     };
 	
     downBtnDiv.className = 'downBtnDiv';
     downBtnDiv.appendChild(cancelBtn);
     downBtnDiv.appendChild(acceptBtn);
 	
-    csIdLabel.innerHTML = '<b>Numéro Cascades :</b>';
-    fctryIdLabel.innerHTML = '<b>Numéro de compagnie :</b>';
-    nameLabel.innerHTML = '<b>Nom de la pièce :</b>';
+    csIdLabel.innerHTML = '<b>NumÃ©ro Cascades :</b>';
+    fctryIdLabel.innerHTML = '<b>NumÃ©ro de compagnie :</b>';
+    nameLabel.innerHTML = '<b>Nom de la piÃ¨ce :</b>';
     secMagLabel.innerHTML = '<b>Section magasin :</b>';
     rClassLabel.innerHTML = '<b>Classification :</b>';
     cmpgnyLabel.innerHTML = '<b>Compagnie :</b>';
@@ -543,7 +552,7 @@ function openCreateRebuilt() {
     creationPageDiv.className = 'winInDevPage';
     creationTopDiv.className = 'topWinInDevPage';
     creationTitleDiv.className = 'titleInTopDevPage';
-    creationTitle.innerHTML = "Création d'un Rebuilt"
+    creationTitle.innerHTML = "CrÃ©ation d'un Rebuilt"
     creationPageCenterDiv.className = 'centerWinInDevPage';
     XiconDiv.className = 'XiconDiv';
 	
@@ -552,6 +561,7 @@ function openCreateRebuilt() {
     Xicon.innerHTML = 'close';
     Xicon.addEventListener('mousedown', () => {
         creationPageDiv.remove();
+		isCreateRebWinOpen = false;
     });
 	
     creationTitleDiv.appendChild(creationTitle);
