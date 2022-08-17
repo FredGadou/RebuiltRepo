@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: monospace;
+	overflow-x: hidden;
 }
 
 h1 {

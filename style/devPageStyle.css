@@ -38,7 +38,7 @@
     height: 32px;
     background-color: darkgray;
     border: solid;
-    border-width: 2px;
+    border-width: 1px;
     padding-inline-end: 375px;
 }
 
@@ -48,10 +48,11 @@
     text-align: center;
     border-inline: solid;
     border-block-end: solid;
-    border-width: 2px;
+    border-width: 1px;
     width: 100%;
+    border-color: black;
     padding-inline-end: 375px;
-	background-color: #b1d6fb;
+    background-image: linear-gradient(174deg, #dfdfdf, #a9a9a9);
 }
 
 .titleInTopDevPage {
@@ -76,15 +77,15 @@
 }
 
 .tipWinDiv {
-	background-color: lightgray;
+	background-color: #a1a1a1;
     height: 400px;
     width: 330px;
     border-radius: 20px;
     position: absolute;
     left: 650px;
     top: 50px;
-	text-align: start;
-	padding: 10px;
+    text-align: start;
+    padding: 10px;
 }
 
 .tipWinTitleDiv{
