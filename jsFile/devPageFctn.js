@@ -410,8 +410,8 @@ function openCreateRebuilt() {
 		addPartOtherHalfLineDiv.appendChild(addPartNameInput);
 		addPartOtherHalfLineDiv.appendChild(addPartSectMagaLabel);
 		addPartOtherHalfLineDiv.appendChild(addPartSectMagaInput);
-		addPartBtnDiv.appendChild(addPartOKBtn)
-		addPartBtnDiv.appendChild(addPartCancelBtn)
+		addPartBtnDiv.appendChild(addPartCancelBtn);
+		addPartBtnDiv.appendChild(addPartOKBtn);
 		addPartOtherHalfLineDiv.appendChild(addPartBtnDiv);
 	}
 	
@@ -432,8 +432,8 @@ function openCreateRebuilt() {
 	addDocDescrInput.className = 'creatRepPartInput';
 	addDocBtnDiv.className  = 'addPartBtnDiv';
 	
-	addDocNameLabel.innerHTML = "**Inclure l'extention (ex: partlist.pdf)**<br>Nom du fichier :";
-	addDocDescrLabel.innerHTML = '<br><br>Titre descriptif du document :';
+	addDocNameLabel.innerHTML = "**Inclure l'extention (ex: partlist.pdf)**<br><b>Nom du fichier :</b>";
+	addDocDescrLabel.innerHTML = '<br><br><b>Titre descriptif du document :</b>';
 	
 	addDocOKbtn.innerHTML = 'OK'; 
 	addDocCancelBtn.innerHTML = 'Annuler';
@@ -478,8 +478,8 @@ function openCreateRebuilt() {
 		addDocOtherHalfLineDiv.appendChild(addDocDescrLabel);
 		addDocOtherHalfLineDiv.appendChild(addDocDescrInput);
 		addDocOtherHalfLineDiv.appendChild(addDocBtnDiv);
-		addDocBtnDiv.appendChild(addDocOKbtn);
 		addDocBtnDiv.appendChild(addDocCancelBtn);
+		addDocBtnDiv.appendChild(addDocOKbtn);
 	}
 	
 
@@ -495,28 +495,65 @@ function openCreateRebuilt() {
     acceptBtn.style.marginInline = '20px';
 	acceptBtn.style.fontSize = 'x-large';
     acceptBtn.onclick = () => {
-		let newRebID;
-		if(csIdInput.value === '' || csIdInput.value === ' '){
-			newRebID = rebuiltList.getFictiveNum();
-		} else {
-			newRebID = csIdInput.value;
+		
+		let warningBackDiv = document.createElement('div');
+		let warningWin = document.createElement('div');
+		let warningMes = document.createElement('p');
+		let warningAccBtn = document.createElement('button');
+		let warningCanBtn = document.createElement('button');
+		
+		warningBackDiv.style.position = 'fixed';
+		warningBackDiv.style.top = '0px';
+		warningBackDiv.style.backgroundImage ='linear-gradient(174deg, rgb(6 6 6 / 66%), rgb(2 2 2 / 79%))';
+		warningBackDiv.style.height = '100%';
+		warningBackDiv.style.width = '100%';
+		
+		warningWin.className = 'passwordWinDiv';
+		warningWin.style.textAlign = 'center';
+		warningWin.style.padding = '15px';
+		
+		warningMes.innerHTML = "Vous vous apprêtez à créer un item. Voulez-vous continuer?";
+		warningAccBtn.innerHTML = 'Accepter';
+		warningCanBtn.innerHTML = 'Annuler';
+		
+		warningAccBtn.style.margin = '5px';
+		warningCanBtn.style.margin = '5px';
+		
+		warningCanBtn.onclick = () => {
+			warningBackDiv.remove();
 		}
-        let newRebuilt = new Rebuilt(newRebID, nameInput.value);
-        newRebuilt.factoryId = fctryIdInput.value;
-        newRebuilt.sectionMaga = secMagInput.value;
-        newRebuilt.rebuiltClass = rClassSelec.value;
-		newRebuilt.img = `image/${newRebID}.jpg`
-		partListToAdd.forEach(part => {
-			if(part.cascadesId === '' || part.cascadesId === ' ') {
-				part.cascadesId = rebuiltList.getFictiveNum();
+		
+		warningAccBtn.onclick = () => {
+			warningBackDiv.remove();
+			let newRebID;
+			if(csIdInput.value === '' || csIdInput.value === ' '){
+				newRebID = rebuiltList.getFictiveNum();
+			} else {
+				newRebID = csIdInput.value;
 			}
-			newRebuilt.addPart(part);
-		});
-		newRebuilt.documentations = docList;
-        rebuiltList.addRebuilt(newRebuilt);
-		alert(`Nouveau Rebuilt créé: #cascades: ${newRebuilt.cascadesId}, Nom: ${newRebuilt.name}.\nVous devez sauvegarder pour que les changements prennent effet`)
-        creationPageDiv.remove();
-		isCreateRebWinOpen = false;
+			let newRebuilt = new Rebuilt(newRebID, nameInput.value);
+			newRebuilt.factoryId = fctryIdInput.value;
+			newRebuilt.sectionMaga = secMagInput.value;
+			newRebuilt.rebuiltClass = rClassSelec.value;
+			newRebuilt.company = cmpgnyInput.value;
+			newRebuilt.img = `image/${newRebID}.jpg`
+			partListToAdd.forEach(part => {
+				if(part.cascadesId === '' || part.cascadesId === ' ') {
+					part.cascadesId = rebuiltList.getFictiveNum();
+				}
+				newRebuilt.addPart(part);
+			});
+			newRebuilt.documentations = docList;
+			rebuiltList.addRebuilt(newRebuilt);
+			alert(`Nouveau Rebuilt créé: #cascades: ${newRebuilt.cascadesId}, Nom: ${newRebuilt.name}.\nVous devez sauvegarder pour que les changements prennent effet`)
+			creationPageDiv.remove();
+			isCreateRebWinOpen = false;
+		}
+		warningWin.appendChild(warningMes);
+		warningWin.appendChild(warningCanBtn);
+		warningWin.appendChild(warningAccBtn);
+		warningBackDiv.appendChild(warningWin)
+		devPage.appendChild(warningBackDiv);
     };
 	
     downBtnDiv.className = 'downBtnDiv';

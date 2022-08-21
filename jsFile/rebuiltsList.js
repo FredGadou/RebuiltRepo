@@ -16,6 +16,7 @@ const festo = new Company('Festo', getCompanyList('Festo'));
 const numatics = new Company('Numatics', getCompanyList('Numatics'));
 const pneumax = new Company('Pneumax', getCompanyList('Pneumax'));
 const scorpion = new Company('Scorpion', getCompanyList('Scorpion'));
+const sewEuro = new Company('Sew Eurodrive', getCompanyList('Sew Eurodrive'));
 const sheffer = new Company('Sheffer', getCompanyList('Sheffer'));
 const smc = new Company('SMC', getCompanyList('SMC'));
 const tidland = new Company('Tidland', getCompanyList('Tidland'));
@@ -71,8 +72,9 @@ function getCompanies() {
     companiesMap.set('Festo', festo);
     companiesMap.set('Numatics', numatics);
     companiesMap.set('Pneumax', pneumax);
-    companiesMap.set('Scorpion', scorpion)
-    companiesMap.set('Sheffer', sheffer)
+    companiesMap.set('Sew Eurodrive', sewEuro);
+    companiesMap.set('Scorpion', scorpion);
+    companiesMap.set('Sheffer', sheffer);
     companiesMap.set('SMC', smc);
     companiesMap.set('Tidland', tidland);
     return companiesMap;
