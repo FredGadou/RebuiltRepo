@@ -3,7 +3,10 @@ let devPageContentDiv = document.getElementById('devPageContentDiv');
 let createNewRebBtn = document.getElementById('createNewRebBtn');
 let saveDataBtn = document.getElementById('saveDataBtn');
 let modifyRebuiltBtn = document.getElementById('modifyRebuiltBtn');
+let creationPageDiv;
 let isCreateRebWinOpen = false;
+let isModifyRebWinOpen = false;
+let isSaveWinOpen = false;
 
 commandInput.addEventListener('keydown', e => {
     if (e.keyCode != 13) return;
@@ -28,10 +31,13 @@ createNewRebBtn.addEventListener('click', () => {
 });
 
 modifyRebuiltBtn.addEventListener('click', () => {
-	alert('Fonction pas disponiple');
+	getRebuiltToModPage();
+	//alert('Fonction pas disponiple');
 });
 
 saveDataBtn.addEventListener('click',() => {
+	if(isSaveWinOpen) return;
+	isSaveWinOpen = true;
 	let messageWinDiv = document.createElement('div');
 	let messageP = document.createElement('p');
 	let okMessBtn = document.createElement('button');
@@ -45,15 +51,16 @@ saveDataBtn.addEventListener('click',() => {
 	okMessBtn.onclick = () => {
 		saveData(toStringRebuiltList());
 		messageWinDiv.remove();
+		isSaveWinOpen = false;
 	}
-	cancelMessBtn.onclick = () => {messageWinDiv.remove();}
+	cancelMessBtn.onclick = () => {messageWinDiv.remove();isSaveWinOpen = false;}
 	messageWinDiv.appendChild(messageP);
 	messageWinDiv.appendChild(okMessBtn);
 	messageWinDiv.appendChild(cancelMessBtn);
 	devPageContentDiv.appendChild(messageWinDiv);
 });
 
-function openDevPageAccess() {
+function openDevPageAccess(){
     let nbTry = 0;
     let passwordWin = document.createElement('div');
     passwordWin.className = 'passwordWinDiv';
@@ -143,7 +150,7 @@ function openDevPageAccess() {
     document.querySelector('body').appendChild(passwordWin);
 }
 
-function openCreateRebuilt() {
+function openCreateRebuilt(){
 	if(isCreateRebWinOpen) return;
 	isCreateRebWinOpen = true;
     let creationPageDiv = document.createElement('div');
@@ -489,7 +496,7 @@ function openCreateRebuilt() {
     cancelBtn.onclick = () => {
 		creationPageDiv.remove();
 		isCreateRebWinOpen = false;
-}
+    }
 	
     acceptBtn.innerHTML = 'OK';
     acceptBtn.style.marginInline = '20px';
@@ -620,3 +627,455 @@ function openCreateRebuilt() {
     creationPageDiv.appendChild(creationPageCenterDiv);
     devPageContentDiv.appendChild(creationPageDiv);
 }
+
+function getRebuiltToModPage(){
+	if (isModifyRebWinOpen) return;
+	isModifyRebWinOpen = true;
+    let getRebPageDiv = document.createElement('div');
+    let getRebTopDiv = document.createElement('div');
+    let getRebTitleDiv = document.createElement('div');
+    let getRebTitle = document.createElement('label');
+    let getRebPageCenterDiv = document.createElement('div');
+	
+    let XiconDiv = document.createElement('div');
+    let Xicon = document.createElement('span');
+	
+	let rebListDiv = document.createElement('div');
+	let rebListTable = document.createElement('table');
+	let rebListTopTableRow = document.createElement('tr');
+	let rebListTopTH1 = document.createElement('th');
+	let rebListTopTH2 = document.createElement('th');
+	let rebListTopTH3 = document.createElement('th');
+	let isSortTop = false;
+	
+	rebListTopTH1.innerHTML = 'ID CASCADES';
+    rebListTopTH1.className = 'rebListTopTH1';
+	rebListTopTH2.innerHTML = 'NOM';
+    rebListTopTH2.className = 'rebListTopTH2';
+	rebListTopTH3.innerHTML = 'ID COMPAGNIE';
+    rebListTopTH3.className = 'rebListTopTH3';
+	
+
+	let allRebList_array = Array.from(rebuiltList.rList);
+	let rebToMod;
+
+
+	rebListTopTH1.addEventListener('click', ()=>{  // sort table by cascadesID
+
+
+		if(!isSortTop){ 
+
+			allRebList_array.sort((a,b)=>a[1].cascadesId - b[1].cascadesId);
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}	
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = true;
+
+		} else {
+
+			allRebList_array.sort((a,b)=>b[1].cascadesId - a[1].cascadesId); 
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = false;
+		}
+	}); 
+
+	rebListTopTH2.addEventListener('click', ()=>{  // sort table by name
+
+
+		if(!isSortTop){ 
+
+			allRebList_array.sort((a,b)=>{
+				const nameA = a[1].name.toUpperCase(); 
+  				const nameB = b[1].name.toUpperCase(); 
+  				if (nameA < nameB) {
+    				return -1;
+  				}
+  				if (nameA > nameB) {
+    				return 1;
+  				}
+			});
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}	
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = true;
+
+		} else {
+
+			allRebList_array.sort((a,b)=>{
+				const nameA = a[1].name.toUpperCase(); 
+  				const nameB = b[1].name.toUpperCase(); 
+  				if (nameA > nameB) {
+    				return -1;
+  				}
+  				if (nameA < nameB) {
+    				return 1;
+  				}
+			}); 
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = false;
+		}
+	}); 
+
+	rebListTopTH3.addEventListener('click', ()=>{  // sort table by factoryID
+
+
+		if(!isSortTop){ 
+
+			allRebList_array.sort((a,b)=>{
+				const nameA = a[1].factoryId.toUpperCase(); 
+  				const nameB = b[1].factoryId.toUpperCase(); 
+  				if (nameA < nameB) {
+    				return -1;
+  				}
+  				if (nameA > nameB) {
+    				return 1;
+  				}
+			});
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}	
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = true;
+
+		} else {
+
+			allRebList_array.sort((a,b)=>{
+				const nameA = a[1].factoryId.toUpperCase(); 
+  				const nameB = b[1].factoryId.toUpperCase(); 
+  				if (nameA > nameB) {
+    				return -1;
+  				}
+  				if (nameA < nameB) {
+    				return 1;
+  				}
+			}); 
+
+			while(rebListTable.childElementCount > 1){
+				rebListTable.childNodes[1].remove();
+			}
+
+			allRebList_array.forEach(a => {
+				let rebListTableRow = document.createElement('tr');
+				let rebListTD1 = document.createElement('td');
+				let rebListTD2 = document.createElement('td');
+				let rebListTD3 = document.createElement('td');
+		
+				rebListTableRow.className = 'rowsRebModTable';
+	
+				if(a[1].cascadesId < 1000) {
+					rebListTD1.innerHTML = 'N/A';
+				} else {
+					rebListTD1.innerHTML = a[1].cascadesId;
+				}
+				rebListTD2.innerHTML = a[1].name;
+				rebListTD3.innerHTML = a[1].factoryId;
+	
+				rebListTableRow.appendChild(rebListTD1);
+				rebListTableRow.appendChild(rebListTD2);
+				rebListTableRow.appendChild(rebListTD3);
+	
+				rebListTable.appendChild(rebListTableRow);
+			});
+
+			isSortTop = false;
+		}
+	}); 
+	
+	rebListTopTableRow.appendChild(rebListTopTH1);
+	rebListTopTableRow.appendChild(rebListTopTH2);
+	rebListTopTableRow.appendChild(rebListTopTH3);
+    rebListTopTableRow.className = 'firstRowRebMod';
+	rebListTopTableRow.style.backgroundColor = '#a1a1a1';
+	
+	rebListTable.appendChild(rebListTopTableRow);
+	rebListTable.className = 'rebToModTable';
+	
+	rebuiltList.rList.forEach(rebuilt => {  // build table
+
+		let rebListTableRow = document.createElement('tr');
+		let rebListTD1 = document.createElement('td');
+		let rebListTD2 = document.createElement('td');
+		let rebListTD3 = document.createElement('td');
+		
+		rebListTableRow.className = 'rowsRebModTable';
+	
+		rebListTD1.innerHTML = rebuilt.cascadesId;
+		rebListTD2.innerHTML = rebuilt.name;
+		rebListTD3.innerHTML = rebuilt.factoryId;
+	
+		rebListTableRow.appendChild(rebListTD1);
+		rebListTableRow.appendChild(rebListTD2);
+		rebListTableRow.appendChild(rebListTD3);
+
+		rebListTableRow.addEventListener('click', () => {
+			rebToMod = rebuilt;
+		});
+	
+		rebListTable.appendChild(rebListTableRow);
+	});
+	
+	
+	
+	getRebPageDiv.className = 'winInDevPage';
+	getRebTopDiv.className = 'topWinInDevPage';
+	getRebTitleDiv.className = 'titleInTopDevPage';
+	getRebPageCenterDiv.className = 'centerWinInDevPage';
+	getRebPageCenterDiv.style.margin = '0 auto';
+    rebListDiv.className = 'rebListDiv';
+	XiconDiv.className = 'XiconDiv';
+	Xicon.className = 'material-icons';
+	
+	Xicon.id = 'Xicon2';
+	
+	getRebTitle.innerHTML = 'Choisir un Rebuilt à modifier';
+	Xicon.innerHTML = 'close';
+	
+	Xicon.addEventListener('click', () => {
+		getRebPageDiv.remove();
+		isModifyRebWinOpen = false;
+	});
+	
+	XiconDiv.appendChild(Xicon);
+	
+	getRebTitleDiv.appendChild(getRebTitle);
+	
+	getRebTopDiv.appendChild(getRebTitleDiv);
+	getRebTopDiv.appendChild(XiconDiv);
+
+    rebListDiv.appendChild(rebListTable);
+	
+	getRebPageCenterDiv.appendChild(rebListDiv);
+	
+	getRebPageDiv.appendChild(getRebTopDiv);
+	getRebPageDiv.appendChild(getRebPageCenterDiv);
+	
+	devPageContentDiv.appendChild(getRebPageDiv);
+}
+
+function getModifRebuiltDiv(rebuilt){
+	
+    let modifyPageCenterDiv = document.createElement('div');
+	
+    let XiconDiv = document.createElement('div');
+    let Xicon = document.createElement('span');
+	
+    let csLineDiv = document.createElement('div');
+    let csFirstHalfLineDiv = document.createElement('div');
+    let csOtherHalfLineDiv = document.createElement('div');
+    let csIdLabel = document.createElement('label');
+    let csIdInput = document.createElement('input');
+	
+    let fctryIdLineDiv = document.createElement('div');
+    let fctryIdFirstHalfLineDiv = document.createElement('div');
+    let fctryIdOtherHalfLineDiv = document.createElement('div');
+    let fctryIdLabel = document.createElement('label');
+    let fctryIdInput = document.createElement('input');
+	
+    let nameLineDiv = document.createElement('div');
+    let nameFirstHalfLineDiv = document.createElement('div');
+    let nameOtherHalfLineDiv = document.createElement('div');
+    let nameLabel = document.createElement('label');
+    let nameInput = document.createElement('input');
+	
+    let secMagLineDiv = document.createElement('div');
+    let secMagFirstHalfLineDiv = document.createElement('div');
+    let secMagOtherHalfLineDiv = document.createElement('div');
+    let secMagLabel = document.createElement('label');
+    let secMagInput = document.createElement('input');
+	
+    let rClassLineDiv = document.createElement('div');
+    let rClassFirstHalfLineDiv = document.createElement('div');
+    let rClassOtherHalfLineDiv = document.createElement('div');
+    let rClassLabel = document.createElement('label');
+    let rClassSelec = document.createElement('select');
+    let rClassOpt1 = document.createElement('option');
+    let rClassOpt2 = document.createElement('option');
+    let rClassOpt3 = document.createElement('option');
+    let rClassOpt4 = document.createElement('option');
+    let rClassOpt5 = document.createElement('option');
+    let rClassOpt6 = document.createElement('option');
+    let rClassOpt7 = document.createElement('option');
+	
+    let cmpgnyLineDiv = document.createElement('div');
+    let cmpgnyFirstHalfLineDiv = document.createElement('div');
+    let cmpgnyOtherHalfLineDiv = document.createElement('div');
+    let cmpgnyLabel = document.createElement('label');
+    let cmpgnyInput = document.createElement('input');
+	
+	let partListToAdd = new Map();
+	
+	let addPartLineDiv = document.createElement('div');
+	let addPartFirstLineDiv = document.createElement('div');
+	let addPartOtherHalfLineDiv = document.createElement('div');
+	let addPartLabel = document.createElement('label');
+	let addPartButton = document.createElement('button');
+	
+	let addPartCSIDLabel = document.createElement('label');
+	let addPartCSIDInput = document.createElement('input');
+	let addPartFctyIDLabel = document.createElement('label');
+	let addPartFctyIDInput = document.createElement('input');
+	let addPartNameLabel = document.createElement('label');
+	let addPartNameInput = document.createElement('input');
+	let addPartSectMagaLabel = document.createElement('label');
+	let addPartSectMagaInput = document.createElement('input');
+	let addPartBtnDiv = document.createElement('div');
+	let addPartOKBtn = document.createElement('button');
+	let addPartCancelBtn = document.createElement('button');
+		
+	let docList = [];
+	
+	let addDocLineDiv = document.createElement('div');
+	let addDocFirstLineDiv = document.createElement('div');
+	let addDocOtherHalfLineDiv = document.createElement('div');
+	let addDocLabel = document.createElement('label');
+	let addDocButton = document.createElement('button');
+	
+	let addDocNameLabel = document.createElement('label');
+	let addDocNameInput = document.createElement('input');
+	let addDocDescrLabel = document.createElement('label');
+	let addDocDescrInput = document.createElement('input');
+	let addDocBtnDiv = document.createElement('div');
+	let addDocOKbtn = document.createElement('button');
+	let addDocCancelBtn = document.createElement('button');
+	
+    let downBtnDiv = document.createElement('div');
+    let cancelBtn = document.createElement('button');
+    let acceptBtn = document.createElement('button');
+	
+	let tipWinDiv = document.createElement('div');
+	let tipWinTitleDiv = document.createElement('div');
+	let tipWinTitle = document.createElement('label');
+	let tipDocDiv = document.createElement('div');
+	let tipImgDiv = document.createElement('div');
+	let tipDocP = document.createElement('p');
+	let tipImgP = document.createElement('p');
+}
+
